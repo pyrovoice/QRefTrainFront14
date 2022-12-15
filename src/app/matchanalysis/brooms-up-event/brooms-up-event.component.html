@@ -1,0 +1,49 @@
+<form #matchEventForm="ngForm">
+    <mat-form-field>
+        <mat-label>Quaffle Runner {{matchService.teamA.name}}</mat-label>
+        <mat-select disableRipple name="qrA" id="qrA" [(ngModel)]="matchService.broomsUp.quaffleRunnerA">
+            <mat-option *ngIf="matchService.broomsUp.quaffleRunnerA"><i>Clear</i></mat-option>
+            <mat-option *ngFor="let p of getAvailablePlayers(true, Ball.Quaffle, matchService.broomsUp.quaffleRunnerA)" [value]="p">{{ p.playerNumber }} {{ p.playerName }} </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Bludger Runner {{matchService.teamA.name}}</mat-label>
+        <mat-select disableRipple name="brA" id="brA" [(ngModel)]="matchService.broomsUp.bludgerRunnerA">
+            <mat-option *ngIf="matchService.broomsUp.bludgerRunnerA"><i>Clear</i></mat-option>
+            <mat-option *ngFor="let p of getAvailablePlayers(true, Ball.Bludger, matchService.broomsUp.bludgerRunnerA)" [value]="p">{{ p.playerNumber }} {{ p.playerName }} </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Chaser in opposing half {{matchService.teamA.name}}</mat-label>
+        <mat-select disableRipple name="ohA" id="ohA" [(ngModel)]="matchService.broomsUp.opposingHalfChaserA">
+            <mat-option *ngIf="matchService.broomsUp.opposingHalfChaserA"><i>Clear</i></mat-option>
+            <mat-option *ngFor="let p of getAvailablePlayers(true, Ball.Quaffle,matchService.broomsUp.opposingHalfChaserA)" [value]="p">{{ p.playerNumber }} {{ p.playerName }} </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Other chaser {{matchService.teamA.name}}</mat-label>
+        <mat-select disableRipple name="c1A" id="c1A" [(ngModel)]="matchService.broomsUp.chaserA1">
+            <mat-option *ngIf="matchService.broomsUp.chaserA1"><i>Clear</i></mat-option>
+            <mat-option *ngFor="let p of getAvailablePlayers(true, Ball.Quaffle, matchService.broomsUp.chaserA1)" [value]="p">{{ p.playerNumber }} {{ p.playerName }} </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Other chaser {{matchService.teamA.name}}</mat-label>
+        <mat-select disableRipple name="c2A" id="c2A" [(ngModel)]="matchService.broomsUp.chaserA2">
+            <mat-option *ngIf="matchService.broomsUp.chaserA2"><i>Clear</i></mat-option>
+            <mat-option *ngFor="let p of getAvailablePlayers(true, Ball.Quaffle, matchService.broomsUp.chaserA2)" [value]="p">{{ p.playerNumber }} {{ p.playerName }} </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Other beater {{matchService.teamA.name}}</mat-label>
+        <mat-select disableRipple name="b2A" id="b2A" [(ngModel)]="matchService.broomsUp.beaterA">
+            <mat-option *ngIf="matchService.broomsUp.beaterA"><i>Clear</i></mat-option>
+            <mat-option *ngFor="let p of getAvailablePlayers(true, Ball.Bludger, matchService.broomsUp.beaterA)" [value]="p">{{ p.playerNumber }} {{ p.playerName }} </mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>

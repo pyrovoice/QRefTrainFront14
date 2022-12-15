@@ -1,0 +1,29 @@
+<form #matchEventForm="ngForm">
+
+   <mat-form-field>
+      <mat-label>Event type</mat-label>
+      <mat-select name="matchEventType" id="matchEventType" [(ngModel)]="matchEvent.matchEventType">
+         <mat-option *ngFor="let type of MatchEventType  | keyvalue" [value]="type.value">{{ type.value }}
+         </mat-option>
+      </mat-select>
+   </mat-form-field>
+
+<!-- CONTINUE HERE, add players to the list
+   <div class="form-group">
+      <label for="name">Player Number</label>
+      <input type="text" class="form-control" id="playerNumber" required [(ngModel)]="matchEvent.player"
+         name="playerNumber">
+   </div>
+   <div class="form-group">
+      <label for="name">To</label>
+      <input type="text" class="form-control" id="playerNumber" required [(ngModel)]="matchEvent.playerNumber"
+         name="playerNumber">
+   </div>-->
+</form>
+
+<div class="container p-0 w-100 h-100 m-0">
+   <img class="w-100 h-100" src="/assets/quidditch_haflfield.png" />
+   <input *ngFor="let checkbox of checkboxes" type="checkbox" class="checkbox" [(ngModel)]="checkbox.value"
+      [ngStyle]="{'left': checkbox.posXPercent + '%', 'top': checkbox.posYPercent + '%'}"
+      (change)="onChange(checkbox)" />
+</div>

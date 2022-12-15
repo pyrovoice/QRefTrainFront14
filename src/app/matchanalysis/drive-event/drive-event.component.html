@@ -1,0 +1,48 @@
+<form #matchEventForm="ngForm">
+   <div class="form-group">
+      <label for="Time">Time (s)</label>
+      <div class="col"><input type="number" class="form-control" id="startTimeSecond" required
+            [(ngModel)]="drive.startTimeSecond" name="startTimeSecond"></div>
+   </div>
+
+   <mat-form-field>
+      <mat-label>Attacking</mat-label>
+      <mat-select name="isAAttacking" id="isAAttacking" [(ngModel)]="drive.attackingTeam">
+         <mat-option [value]="teamsService.teamA.name">{{ teamsService.teamA.name }} </mat-option>
+         <mat-option [value]="teamsService.teamB.name">{{ teamsService.teamB.name }} </mat-option>
+      </mat-select>
+   </mat-form-field>
+   <mat-form-field>
+      <mat-label>Bludger Control</mat-label>
+      <mat-select name="BCTeamA" id="BCTeamA" [(ngModel)]="drive.TeamWithBC">
+         <mat-option [value]="teamsService.teamA.name">{{ teamsService.teamA.name }} </mat-option>
+         <mat-option [value]="teamsService.teamB.name">{{ teamsService.teamB.name }} </mat-option>
+      </mat-select>
+   </mat-form-field>
+   <mat-form-field>
+      <mat-label>Strategy A</mat-label>
+      <mat-select name="stratA" id="stratA" [(ngModel)]="drive.strategyTeamA">
+         <ng-container *ngIf="drive.attackingTeam == teamsService.teamA.name">
+            <mat-option *ngFor="let strat of offStrategies" [value]="strat">{{ strat.name }}
+            </mat-option>
+         </ng-container>
+         <ng-container *ngIf="drive.attackingTeam == teamsService.teamB.name">
+            <mat-option *ngFor="let strat of defStrategies" [value]="strat">{{ strat.name }}
+            </mat-option>
+         </ng-container>
+      </mat-select>
+   </mat-form-field>
+   <mat-form-field>
+      <mat-label>Strategy B</mat-label>
+      <mat-select name="stratB" id="stratB" [(ngModel)]="drive.strategyTeamB">
+         <ng-container *ngIf="drive.attackingTeam == teamsService.teamB.name">
+            <mat-option *ngFor="let strat of offStrategies" [value]="strat">{{ strat.name }}
+            </mat-option>
+         </ng-container>
+         <ng-container *ngIf="drive.attackingTeam == teamsService.teamA.name">
+            <mat-option *ngFor="let strat of defStrategies" [value]="strat">{{ strat.name }}
+            </mat-option>
+         </ng-container>
+      </mat-select>
+   </mat-form-field>
+</form>
