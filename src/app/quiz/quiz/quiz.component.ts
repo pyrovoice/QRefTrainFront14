@@ -1,5 +1,5 @@
 import { LocalQuizService } from './../../shared/service/localquizz.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { QuizService } from 'src/app/shared/service/quiz.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionListDTO } from 'src/app/shared/api/dto/question-listDTO';
@@ -18,23 +18,27 @@ export class QuizComponent implements OnInit {
   currentVideoURL;
   questions: Question[];
   currentQuestionNb = 0;
+  @ViewChild('video') video!: ElementRef;
   constructor(private quizService: QuizService, private localQuizService: LocalQuizService,
     private route: ActivatedRoute, private sanitizer: DomSanitizer, private api: AdminService, private router: Router) {
-      
+
   }
 
   async ngOnInit(): Promise<void> {
-    let selectedOptions; 
+    let selectedOptions;
     this.route.queryParamMap.subscribe(params => selectedOptions = params.getAll('topic'));
-    let withVideo; 
+    let withVideo;
     this.route.queryParamMap.subscribe(params => withVideo = params.get('selectedQuestionWithVideo') == "true");
     // this.quizService.getQuestions(this.selectedOptions).subscribe(response => {
     //   this.questions = this.getQuestionsFromDTO(response);
     // });
     await this.localQuizService.getQuestions(10, selectedOptions, withVideo).then(questions => {
-       this.questions = questions;
-       console.log(this.questions)
+      this.questions = questions;
+      console.log(this.questions)
     })
+  }
+
+  ngAfterViewInit() {
     this.updateURL();
   }
 
@@ -53,9 +57,12 @@ export class QuizComponent implements OnInit {
 
   updateURL() {
     this.currentVideoURL = "assets/videos/" + this.currentQuestion.URLVideo + ".mp4"
+    if (this.hasVideo() && this.video) {
+      this.video.nativeElement.load();
+    }
   }
 
-  hasVideo(){
+  hasVideo() {
     return this.currentQuestion.URLVideo != null && this.currentQuestion.URLVideo != ""
   }
 
@@ -65,8 +72,8 @@ export class QuizComponent implements OnInit {
     }
   }
 
-  isCurrentLastQuestion(){
-    return this.currentQuestionNb < this.questions.length-1
+  isCurrentLastQuestion() {
+    return this.currentQuestionNb < this.questions.length - 1
   }
 
   isQuestionCurrentlySelected(questionId) {
@@ -74,13 +81,13 @@ export class QuizComponent implements OnInit {
   }
 
   getSourceURL(url: String) {
-    if(url == null || url == ""){
+    if (url == null || url == "") {
       return this.sanitizer.bypassSecurityTrustResourceUrl("");
     }
     return this.sanitizer.bypassSecurityTrustResourceUrl(url + "");
   }
 
-  goToResult(){
+  goToResult() {
     this.router.navigate(["/quiz/resultPage"], { queryParams: { questions: JSON.stringify(this.questions) } });
   }
 }
