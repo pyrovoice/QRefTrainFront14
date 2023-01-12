@@ -16,7 +16,7 @@ export class QuizComponent implements OnInit {
 
   //Necessary so the video is not loading everytime there's a change in the question model (so every time an answer is checked)
   currentVideoURL;
-  questions;
+  questions: Question[];
   currentQuestionNb = 0;
   constructor(private quizService: QuizService, private localQuizService: LocalQuizService,
     private route: ActivatedRoute, private sanitizer: DomSanitizer, private api: AdminService, private router: Router) {
@@ -33,6 +33,7 @@ export class QuizComponent implements OnInit {
     // });
     await this.localQuizService.getQuestions(10, selectedOptions, withVideo).then(questions => {
        this.questions = questions;
+       console.log(this.questions)
     })
     this.updateURL();
   }
@@ -51,7 +52,11 @@ export class QuizComponent implements OnInit {
   }
 
   updateURL() {
-    this.currentVideoURL = this.getSourceURL(this.currentQuestion.URLVideo);
+    this.currentVideoURL = "assets/videos/" + this.currentQuestion.URLVideo + ".mp4"
+  }
+
+  hasVideo(){
+    return this.currentQuestion.URLVideo != null && this.currentQuestion.URLVideo != ""
   }
 
   moveCurrentQuestion(i) {

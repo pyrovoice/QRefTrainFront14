@@ -6,7 +6,8 @@ import { ApiService } from '../api/api.service';
 import { Observable } from 'rxjs';
 import { ImportResult } from '../model/import-result';
 import { QuestionSubject } from '../enum/question-topic.enum';
-import { HttpClient } from '@angular/common/http';  
+import { HttpClient } from '@angular/common/http';
+import { QuestionDTO } from '../model/question-dto.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,53 +23,50 @@ export class AdminService {
     return this.apiService.get<Question[]>("question/getAllQuestions", null);
   }
 
-   async loadNonDepreciatedQuestions(questionSubjects?: QuestionSubject): Promise<Question[]> {
+  async loadNonDepreciatedQuestions(questionSubjects?: QuestionSubject): Promise<Question[]> {
     //return this.apiService.get<Question[]>("question/getquestionsbysubjects", questionSubjects);
     let questions: Question[] = [];
     let a = await this.http.get("./assets/questions.json").toPromise();
-    questions =  this.getQuestionsFromJson(a);
+    questions = this.getQuestionsFromJson(a);
     return questions;
   }
 
   private getQuestionsFromJson(data) {
-    const qs = QuestionSubject;
-    var allQuestions: Question[] = [];
-    Object.values(qs).forEach(subject => {
-      if (data[subject] != null) {
-        data[subject].forEach(question => {
-          allQuestions.push(this.getQuestionFromJson(question, subject));
-        });
-      }
-    });
+    let allQuestions: Question[] = [];
+    let qDTOs: QuestionDTO[];
+    qDTOs = data;
+    qDTOs.forEach(qDTO => allQuestions.push(this.getQuestionFromDTO(qDTO)))
     return allQuestions;
   }
 
-  getQuestionFromJson(question: any, subject: any) {
-    let q: Question = {questionText: question["QuestionText"], 
-      publicId: subject + "-" + question["Public Id"], 
-      questionSubject: subject,
-      NGB: this.getNGB(question["NGB"]), 
-      answers: this.getAnswers(question["GoodAnswers"], 
-      question["BadAnswers"]), 
-      isRetired:false,
-      URLVideo:question["Link"]??"",
-      answerExplanation: question["AnswerExplanation"]?? ""};
+  getQuestionFromDTO(questionDTO: QuestionDTO) {
+    let q: Question = {
+      questionText: questionDTO.QuestionText,
+      publicId: questionDTO.Subject + "-" + questionDTO.Id,
+      questionSubject: QuestionSubject[questionDTO.Subject],
+      NGB: this.getNGB(questionDTO.NGB),
+      answers: this.getAnswers(questionDTO.GoodAnswers,
+        questionDTO.BadAnswers),
+      isRetired: false,
+      URLVideo: questionDTO.Link,
+      answerExplanation: questionDTO.AnswerExplanation
+    }
     return q;
   }
 
   private getNGB(ngb: any) {
-    let NGB:NationalGoverningBody = {name:"any", abreviation:"any", location:"any"};
+    let NGB: NationalGoverningBody = { name: "any", abreviation: "any", location: "any" };
     return NGB;
   }
 
-  private getAnswers(goodAnswers:String, badAnswers: String){
-    const answers: Array<Answer> = [];
-    goodAnswers.split("\r\n").forEach(goodAnswer => {
-      answers.push({id:0, text:goodAnswer, isGoodAnswer:true, isSelected:false})
-    });
-    badAnswers.split("\r\n").forEach(badAnswer => {
-      answers.push({id:0, text:badAnswer, isGoodAnswer:false, isSelected:false})
-    });
+  private getAnswers(goodAnswers: string[], badAnswers: string[]) {
+    let answers: Array<Answer> = [];
+    goodAnswers.forEach(a => {
+      answers.push({ id: 0, text: a, isGoodAnswer: true, isSelected: false })
+    })
+    badAnswers.forEach(a => {
+      answers.push({ id: 0, text: a, isGoodAnswer: false, isSelected: false })
+    })
     return answers;
   }
 }
