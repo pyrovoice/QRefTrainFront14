@@ -1,0 +1,21 @@
+.short-label {
+  width: 250px;
+
+  @media screen and (max-width: 768px) {
+    width: 20%;
+  }
+}
+
+input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.selected{
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.61);
+}
+
+.nav-item{
+  cursor: pointer;
+}
