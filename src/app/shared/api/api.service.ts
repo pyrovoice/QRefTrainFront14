@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { ConnectivityService } from './connectivity.service';
@@ -10,6 +10,7 @@ import { environment } from './environment';
   providedIn: 'root'
 })
 export class ApiService {
+
   constructor(private http: HttpClient, private connectivityService: ConnectivityService) { }
 
   public get<T>(path: string, params: any = null, version = "1.0.0") {
@@ -20,7 +21,7 @@ export class ApiService {
 
   public post<T, D>(path: string, data: D, params: any = null, version = "1.0.0") {
     return this.http
-      .post<T>(this.getApiUrl(path, version), data, { params })
+      .post<T>(this.getApiUrl(path, version), data,{ params: params })
       .pipe(catchError(err => this.handleError(err)));
   }
 

@@ -1,6 +1,5 @@
 export class Answer{
     id: Number;
-    text: String;
-    isGoodAnswer: boolean;
+    text: string;
     isSelected: boolean = false;
 }

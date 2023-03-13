@@ -2,13 +2,10 @@ import { QuestionSubject } from '../enum/question-topic.enum';
 import { NationalGoverningBody } from './national-governing-body.model';
 import { Answer } from './answer.model';
 
-export interface Question {
-     publicId: String;
+export class Question {
+     id: number;
      questionSubject: QuestionSubject;
      URLVideo?: String;
      questionText: String;
-     answerExplanation?: String;
-     NGB: NationalGoverningBody;
-     isRetired: boolean;
      answers: Answer[];
 }

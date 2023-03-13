@@ -1,3 +1,4 @@
+import { ResultpageComponent } from './resultpage/resultpage.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -8,7 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
-  declarations: [QuizComponent],
+  declarations: [QuizComponent, ResultpageComponent],
   imports: [
     CommonModule,
     QuizRoutingModule,

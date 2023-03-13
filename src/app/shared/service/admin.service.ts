@@ -1,4 +1,4 @@
-import { Answer } from './../model/answer.model';
+import { AnswerResult } from '../model/answer-result.model';
 import { NationalGoverningBody } from './../model/national-governing-body.model';
 import { Question } from './../model/question';
 import { Injectable } from '@angular/core';
@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 import { ImportResult } from '../model/import-result';
 import { QuestionSubject } from '../enum/question-topic.enum';
 import { HttpClient } from '@angular/common/http';
-import { QuestionDTO } from '../model/question-dto.model';
+import { QuestionDTO } from '../api/dto/questionDTO';
+import { Answer } from '../model/answer.model';
 
 @Injectable({
   providedIn: 'root'
@@ -39,35 +40,23 @@ export class AdminService {
     return allQuestions;
   }
 
-  getQuestionFromDTO(questionDTO: QuestionDTO) {
-    let q: Question = {
-      questionText: questionDTO.QuestionText,
-      publicId: questionDTO.Subject + "-" + questionDTO.Id,
-      questionSubject: QuestionSubject[questionDTO.Subject],
-      NGB: this.getNGB(questionDTO.NGB),
-      answers: this.getAnswers(questionDTO.GoodAnswers,
-        questionDTO.BadAnswers),
-      isRetired: false,
-      URLVideo: questionDTO.Link,
-      answerExplanation: questionDTO.AnswerExplanation
-    }
-    return q;
+  private getQuestionFromDTO(q: QuestionDTO): Question {
+    let question = new Question();
+    question.id = q.Id;
+    question.questionText = q.QuestionText
+    q.Answers.forEach(a => {
+      let answer = new Answer;
+      answer.id = a.Id
+      answer.text = a.Answertext;
+      question.answers.push(answer)
+    });
+    question.URLVideo = question.URLVideo;
+    return question;
   }
 
   private getNGB(ngb: any) {
     let NGB: NationalGoverningBody = { name: "any", abreviation: "any", location: "any" };
     return NGB;
-  }
-
-  private getAnswers(goodAnswers: string[], badAnswers: string[]) {
-    let answers: Array<Answer> = [];
-    goodAnswers.forEach(a => {
-      answers.push({ id: 0, text: a, isGoodAnswer: true, isSelected: false })
-    })
-    badAnswers.forEach(a => {
-      answers.push({ id: 0, text: a, isGoodAnswer: false, isSelected: false })
-    })
-    return answers;
   }
 }
 

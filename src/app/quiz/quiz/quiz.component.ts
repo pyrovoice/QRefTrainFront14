@@ -1,3 +1,4 @@
+import { Answer } from './../../shared/model/answer.model';
 import { LocalQuizService } from './../../shared/service/localquizz.service';
 import { Component, ElementRef, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { QuizService } from 'src/app/shared/service/quiz.service';
@@ -6,6 +7,7 @@ import { QuestionListDTO } from 'src/app/shared/api/dto/question-listDTO';
 import { Question } from 'src/app/shared/model/question';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AdminService } from 'src/app/shared/service/admin.service';
+import { Quiz } from 'src/app/shared/model/quiz.model';
 
 @Component({
   selector: 'app-quiz',
@@ -16,8 +18,9 @@ export class QuizComponent implements OnInit {
 
   //Necessary so the video is not loading everytime there's a change in the question model (so every time an answer is checked)
   currentVideoURL;
-  questions: Question[];
+  questions: Question[] = [];
   currentQuestionNb = 0;
+  quiz: Quiz;
   @ViewChild('video') video!: ElementRef;
   constructor(private quizService: QuizService, private localQuizService: LocalQuizService,
     private route: ActivatedRoute, private sanitizer: DomSanitizer, private api: AdminService, private router: Router) {
@@ -26,15 +29,27 @@ export class QuizComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     let selectedOptions;
-    this.route.queryParamMap.subscribe(params => selectedOptions = params.getAll('topic'));
     let withVideo;
+    this.route.queryParamMap.subscribe(params => selectedOptions = params.getAll('topic'));
     this.route.queryParamMap.subscribe(params => withVideo = params.get('selectedQuestionWithVideo') == "true");
-    // this.quizService.getQuestions(this.selectedOptions).subscribe(response => {
-    //   this.questions = this.getQuestionsFromDTO(response);
-    // });
-    await this.localQuizService.getQuestions(10, selectedOptions, withVideo).then(questions => {
-      this.questions = questions;
-      console.log(this.questions)
+    this.quizService.getQuiz(10, selectedOptions, withVideo).subscribe((quiz) => {
+      this.quiz = quiz;
+      quiz.Questions.forEach(q => {
+        let question = new Question();
+        question.id = q.Id;
+        question.questionText = q.QuestionText
+        question.answers = [];
+        q.Answers.forEach(a => {
+          let answer = new Answer;
+          answer.id = a.Id
+          answer.text = a.Answertext;
+          question.answers.push(answer)
+        });
+        this.quizService.sortAnswer(question)
+
+        question.URLVideo = q.GifName;
+        this.questions.push(question);
+      });
     })
   }
 
@@ -88,6 +103,8 @@ export class QuizComponent implements OnInit {
   }
 
   goToResult() {
-    this.router.navigate(["/quiz/resultPage"], { queryParams: { questions: JSON.stringify(this.questions) } });
+    this.quizService.correctQuiz(this.questions, this.quiz.Id).subscribe(resultId => {
+      this.router.navigate(["/quiz/resultPage"], { queryParams: { resultId: resultId } });
+    })
   }
 }

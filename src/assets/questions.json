@@ -1,6 +1,6 @@
 [
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for a violent or dangerous kick?",
     "GoodAnswers": [
       "Red card"
@@ -14,7 +14,7 @@
     "Subject": "Contacts"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "What is the penalty for illegaly hurdling or attempting to hurdle ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -29,7 +29,7 @@
     "Subject": "Contacts"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "What is the penalty for a reckless contact ?",
     "GoodAnswers": [
       "Red Card"
@@ -44,7 +44,7 @@
     "Subject": "Contacts"
   },
   {
-    "Id": "4",
+    
     "QuestionText": "What is a penalty for an illegal contact on a helpless receiver ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -58,7 +58,7 @@
     "Subject": "Contacts"
   },
   {
-    "Id": "5",
+    
     "QuestionText": "What is a penalty a charge or tackle on a helpless receiver ?",
     "GoodAnswers": [
       "Red card"
@@ -72,7 +72,7 @@
     "Subject": "Contacts"
   },
   {
-    "Id": "6",
+    
     "QuestionText": "What is the penalty for a standard contact violation ?",
     "GoodAnswers": [
       "This penalty may be reduced",
@@ -88,7 +88,7 @@
     "Subject": "Contacts"
   },
   {
-    "Id": "7",
+    
     "QuestionText": "What is the penalty for a minor illegal interposition ?",
     "GoodAnswers": [
       "Back to hoops"
@@ -103,7 +103,7 @@
     "Subject": "Contacts"
   },
   {
-    "Id": "8",
+    
     "QuestionText": "What is the penalty for an illegal interposition ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -117,7 +117,7 @@
     "Subject": "Contacts"
   },
   {
-    "Id": "9",
+    
     "QuestionText": "What is the penalty for illegally interacting with a knocked out player ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -132,7 +132,7 @@
     "Subject": "Contacts"
   },
   {
-    "Id": "10",
+    
     "QuestionText": "Which penalty should the attacking player receive ?",
     "GoodAnswers": [
       "No penalty"
@@ -146,11 +146,11 @@
     ],
     "AnswerExplanation": "A player is allowed to charge another player by having their foot leave the ground if the attempt was to score a goal.",
     "NGB": "ALL",
-    "Link": "Contacts10",
+    "VideoName": "Contacts10",
     "Subject": "Contacts"
   },
   {
-    "Id": "12",
+    
     "QuestionText": "What penalty should green player receive?",
     "GoodAnswers": [
       "No penalty"
@@ -162,11 +162,11 @@
     ],
     "AnswerExplanation": "Body blocking that way is legal even without a ball involved. Carefull, a body block has force applied AFTER contact is initiated, not before.",
     "NGB": "ALL",
-    "Link": "Contacts12",
+    "VideoName": "Contacts12",
     "Subject": "Contacts"
   },
   {
-    "Id": "13",
+    
     "QuestionText": "What penalty should green player receive?",
     "GoodAnswers": [
       "No penalty"
@@ -176,13 +176,13 @@
       "YellowCard",
       "Red Card"
     ],
-    "AnswerExplanation": "Push a player that way is legal even without a ball involed. Carefull, a push should not involve excessive force or force before the contact.",
+    "AnswerExplanation": "Push a player that way is legal even without a ball involved. Carefull, a push should not involve excessive force or force before the contact.",
     "NGB": "ALL",
-    "Link": "Contacts13",
+    "VideoName": "Contacts13",
     "Subject": "Contacts"
   },
   {
-    "Id": "14",
+    
     "QuestionText": "What penalty should yellow player receive?",
     "GoodAnswers": [
       "Yellow Card"
@@ -195,11 +195,11 @@
     ],
     "AnswerExplanation": "Yellow player already has force as the contact begin, qualifying this contact for a charge. Charges are illegal without a ball involved.",
     "NGB": "ALL",
-    "Link": "Contacts14",
+    "VideoName": "Contacts14",
     "Subject": "Contacts"
   },
   {
-    "Id": "15",
+    
     "QuestionText": "What penalty should yellow player receive?",
     "GoodAnswers": [
       "Yellow Card"
@@ -212,11 +212,11 @@
     ],
     "AnswerExplanation": "Green player had her hand on the ball, thus making the kick illegal.",
     "NGB": "ALL",
-    "Link": "Contacts15",
+    "VideoName": "Contacts15",
     "Subject": "Contacts"
   },
   {
-    "Id": "16",
+    
     "QuestionText": "What penalty should yellow player receive?",
     "GoodAnswers": [
       "Yellow Card"
@@ -229,11 +229,11 @@
     ],
     "AnswerExplanation": "Green player had to remove her hand to not get kicked, making it an illegal kick.",
     "NGB": "ALL",
-    "Link": "Contacts16",
+    "VideoName": "Contacts16",
     "Subject": "Contacts"
   },
   {
-    "Id": "17",
+    
     "QuestionText": "What penalty should yellow player receive?",
     "GoodAnswers": [
       "No penalty"
@@ -245,11 +245,11 @@
     ],
     "AnswerExplanation": "While green player's hand was close, yellow player hit the ball before it was touching the ball.",
     "NGB": "ALL",
-    "Link": "Contacts17",
+    "VideoName": "Contacts17",
     "Subject": "Contacts"
   },
   {
-    "Id": "18",
+    
     "QuestionText": "What penalty should yellow player receive?",
     "GoodAnswers": [
       "No penalty"
@@ -261,11 +261,11 @@
     ],
     "AnswerExplanation": "While yellow player kicks the ball as green player touched it, the kick was severely restrained when yellow player realized it would be an illegal kick. In this case, use no harm no foul.",
     "NGB": "ALL",
-    "Link": "Contacts18",
+    "VideoName": "Contacts18",
     "Subject": "Contacts"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "Which of the followings are true for a blue card call ?",
     "GoodAnswers": [
       "Any ball acted upon or prevented to get by the fouling player is turned over",
@@ -280,7 +280,7 @@
     "Subject": "Definition"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "Which of the followings are true for a yellow card call ?",
     "GoodAnswers": [
       "A second yellow card provokes an ejection.",
@@ -296,7 +296,7 @@
     "Subject": "Definition"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "Which of the followings are true for a red card call ?",
     "GoodAnswers": [
       "Any ball acted upon or prevented to get by the fouling player is turned over",
@@ -312,7 +312,7 @@
     "Subject": "Definition"
   },
   {
-    "Publci ID": "1",
+    
     "QuestionText": "What is the penalty for illegaly acting on a dead quaffle ?",
     "GoodAnswers": [
       "Blue Card"
@@ -326,7 +326,7 @@
     "Subject": "BallInteraction"
   },
   {
-    "Publci ID": "2",
+    
     "QuestionText": "What is the penalty for an illegal bludger bat or block ?",
     "GoodAnswers": [
       "Blue Card"
@@ -340,7 +340,7 @@
     "Subject": "BallInteraction"
   },
   {
-    "Publci ID": "3",
+    
     "QuestionText": "What is the penalty for an illegal bludger swat ?",
     "GoodAnswers": [
       "Blue Card"
@@ -353,7 +353,7 @@
     "NGB": "ALL"
   },
   {
-    "Publci ID": "4",
+    
     "QuestionText": "What is the penalty for an unintentionnal natural motion violation ?",
     "GoodAnswers": [
       "Turnover"
@@ -368,7 +368,7 @@
     "Subject": "BallInteraction"
   },
   {
-    "Publci ID": "5",
+    
     "QuestionText": "What is the penalty for an intentionnal natural motion violation ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -383,7 +383,7 @@
     "Subject": "BallInteraction"
   },
   {
-    "Publci ID": "6",
+    
     "QuestionText": "What is the penalty for an illegal use of a ball of one's position ?",
     "GoodAnswers": [
       "Blue Card"
@@ -397,7 +397,7 @@
     "NGB": "ALL"
   },
   {
-    "Publci ID": "7",
+    
     "QuestionText": "What is the penalty for a minor failure to avoid a propelled quaffle ?",
     "GoodAnswers": [
       "Back to hoops"
@@ -411,7 +411,7 @@
     "Subject": "BallInteraction"
   },
   {
-    "Publci ID": "8",
+    
     "QuestionText": "What is the penalty for a failure to avoid a propelled quaffle ?",
     "GoodAnswers": [
       "Blue Card"
@@ -426,7 +426,7 @@
     "Subject": "BallInteraction"
   },
   {
-    "Publci ID": "9",
+    
     "QuestionText": "What is the penalty for an incidental interposition ball interference ?",
     "GoodAnswers": [
       "Turnover"
@@ -441,7 +441,7 @@
     "Subject": "BallInteraction"
   },
   {
-    "Publci ID": "10",
+    
     "QuestionText": "What is the penalty for an interposition ball interference ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -456,7 +456,7 @@
     "Subject": "BallInteraction"
   },
   {
-    "Publci ID": "11",
+    
     "QuestionText": "What is the penalty for a second kick ?",
     "GoodAnswers": [
       "No Penalty"
@@ -472,7 +472,7 @@
     "Subject": "BallInteraction"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for a delay of game ?",
     "GoodAnswers": [
       "Turnover",
@@ -487,7 +487,7 @@
     "Subject": "DelayOfGame"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What are the keeper-specific privilegies ?",
     "GoodAnswers": [
       "That player is immune to KO by bludgers",
@@ -503,7 +503,7 @@
     "Subject": "Keeper"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "Can the keeper start the attack?",
     "GoodAnswers": [
       "Yes"
@@ -513,11 +513,11 @@
     ],
     "AnswerExplanation": "After the ball was passed as the keeper requested, the keeper controls the quaffle inside his keeper zone, game can proceed.",
     "NGB": "ALL",
-    "Link": "Keeper2",
+    "VideoName": "Keeper2",
     "Subject": "Keeper"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "Can the keeper start the attack?",
     "GoodAnswers": [
       "No"
@@ -527,11 +527,11 @@
     ],
     "AnswerExplanation": "Since the ball was touched by another player or official after the goal, the keeper needs to get back into his keeper zone before proceeding with the game.",
     "NGB": "ALL",
-    "Link": "Keeper3",
+    "VideoName": "Keeper3",
     "Subject": "Keeper"
   },
   {
-    "Id": "4",
+    
     "QuestionText": "Can the keeper start the attack?",
     "GoodAnswers": [
       "Yes"
@@ -541,11 +541,11 @@
     ],
     "AnswerExplanation": "Since no one touched the quaffle after the goal, the keeper can start the attack from her own half of the field.",
     "NGB": "ALL",
-    "Link": "Keeper4",
+    "VideoName": "Keeper4",
     "Subject": "Keeper"
   },
   {
-    "Id": "5",
+    
     "QuestionText": "Can the keeper start the attack?",
     "GoodAnswers": [
       "Yes"
@@ -555,11 +555,11 @@
     ],
     "AnswerExplanation": "The keeper correctly goes back into her own half of the field. At this point, she's the first one that touched the ball after the goal and is in her own half, so she can start the attack.",
     "NGB": "ALL",
-    "Link": "Keeper5",
+    "VideoName": "Keeper5",
     "Subject": "Keeper"
   },
   {
-    "Id": "6",
+    
     "QuestionText": "What penalty should yellow player receive?",
     "GoodAnswers": [
       "Yellow Card"
@@ -572,11 +572,11 @@
     ],
     "AnswerExplanation": "It is illegal to steal a ball from a protected keeper.",
     "NGB": "ALL",
-    "Link": "Keeper6",
+    "VideoName": "Keeper6",
     "Subject": "Keeper"
   },
   {
-    "Id": "7",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Keeper is not beat"
@@ -588,11 +588,11 @@
     ],
     "AnswerExplanation": "While the keeper is mostly out of his zone when hit, his feet is still in, so she is still protected.",
     "NGB": "ALL",
-    "Link": "Keeper7",
+    "VideoName": "Keeper7",
     "Subject": "Keeper"
   },
   {
-    "Id": "8",
+    
     "QuestionText": "What penalty should yellow player receive?",
     "GoodAnswers": [
       "No penalty"
@@ -605,11 +605,11 @@
     ],
     "AnswerExplanation": "The keeper stopped being protected once out of the zone, and cannot become protected again until the opposing team controls the quaffle.",
     "NGB": "ALL",
-    "Link": "Keeper8",
+    "VideoName": "Keeper8",
     "Subject": "Keeper"
   },
   {
-    "Id": "9",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Play should keep going"
@@ -619,11 +619,11 @@
     ],
     "AnswerExplanation": "The keeper must be the sole owner of the quaffle to be protected. Since yellow player is contesting it, play keeps going.",
     "NGB": "ALL",
-    "Link": "Keeper9",
+    "VideoName": "Keeper9",
     "Subject": "Keeper"
   },
   {
-    "Id": "10",
+    
     "QuestionText": "Can the keeper start the attack?",
     "GoodAnswers": [
       "No"
@@ -633,11 +633,11 @@
     ],
     "AnswerExplanation": "The keeper cannot restart from the opposing half of the field.",
     "NGB": "ALL",
-    "Link": "Keeper10",
+    "VideoName": "Keeper10",
     "Subject": "Keeper"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for willfully ignoring being knocked out ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -651,7 +651,7 @@
     "Subject": "KO"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "What is the penalty for illegally contacting an opponent with a held bludger?",
     "GoodAnswers": [
       "Blue Card"
@@ -665,7 +665,7 @@
     "Subject": "KO"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "What is the penalty for violating the knockout procedure ?",
     "GoodAnswers": [
       "Repeat procedure"
@@ -681,7 +681,7 @@
     "Subject": "KO"
   },
   {
-    "Id": "4",
+    
     "QuestionText": "What is the penalty for intentionally or repeatedly violating the knockout procedure ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -696,7 +696,7 @@
     "Subject": "KO"
   },
   {
-    "Id": "5",
+    
     "QuestionText": "What is the penalty for illegally interacting with play while knocked out ?",
     "GoodAnswers": [
       "Blue Card"
@@ -710,7 +710,7 @@
     "Subject": "KO"
   },
   {
-    "Id": "6",
+    
     "QuestionText": "What is the penalty for making an illegal contact while knocked out ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -724,7 +724,7 @@
     "Subject": "KO"
   },
   {
-    "Id": "7",
+    
     "QuestionText": "What is the penalty for a struck beater violation?",
     "GoodAnswers": [
       "Blue Card"
@@ -739,7 +739,7 @@
     "Subject": "KO"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for encroaching the pitch ?",
     "GoodAnswers": [
       "Blue Card"
@@ -752,7 +752,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "What is the lower and upper limit of the number of player in a team ?",
     "GoodAnswers": [
       "7",
@@ -766,7 +766,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "What happens when a team falls below the necessary number of player during a game ?",
     "GoodAnswers": [
       "The team must forfeit"
@@ -780,7 +780,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "4",
+    
     "QuestionText": "What is the penalty for a team that has an illegal set of player in play ?",
     "GoodAnswers": [
       "Yellow card for the speaking captain"
@@ -794,7 +794,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "5",
+    
     "QuestionText": "What is the penalty for intentionnaly failing to send a seeker into the game ?",
     "GoodAnswers": [
       "Yellow card for the speaking captain"
@@ -809,7 +809,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "6",
+    
     "QuestionText": "What of the following is true when correcting an illegal set of player ?",
     "GoodAnswers": [
       "The team must change as few players as possible"
@@ -822,7 +822,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "7",
+    
     "QuestionText": "What is the penalty for an illegal substitution ?",
     "GoodAnswers": [
       "Blue Card"
@@ -837,7 +837,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "8",
+    
     "QuestionText": "What is the penalty for feigning an injury ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -851,7 +851,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "9",
+    
     "QuestionText": "What is the penalty for an unintentionnal sideline interference ?",
     "GoodAnswers": [
       "Blue Card"
@@ -865,7 +865,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "10",
+    
     "QuestionText": "What is the penalty for ignoring a ref directive ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -881,7 +881,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "11",
+    
     "QuestionText": "What is the penalty for an unsportsmanlike conduct ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -894,7 +894,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "12",
+    
     "QuestionText": "What is the penalty for an egregious unsportsmanlike conduct ?",
     "GoodAnswers": [
       "Red card"
@@ -907,7 +907,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "13",
+    
     "QuestionText": "What is the penalty for the repeated use of explicit or vulgar language ?",
     "GoodAnswers": [
       "Blue Card"
@@ -922,7 +922,7 @@
     "Subject": "Other"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for knowingly playing with a broken broom ?",
     "GoodAnswers": [
       "Red card"
@@ -936,7 +936,7 @@
     "Subject": "FieldsAndEquipment"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "What is the penalty for entering play with illegally long or sharp fingernails ?",
     "GoodAnswers": [
       "Blue Card"
@@ -951,7 +951,7 @@
     "Subject": "FieldsAndEquipment"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "What is the penalty for entering play without wearing mandatory equipment ?",
     "GoodAnswers": [
       "Blue Card"
@@ -965,7 +965,7 @@
     "Subject": "FieldsAndEquipment"
   },
   {
-    "Id": "4",
+    
     "QuestionText": "What is the penalty for removing a mandatory equipment while in play ?",
     "GoodAnswers": [
       "Blue Card"
@@ -979,7 +979,7 @@
     "Subject": "FieldsAndEquipment"
   },
   {
-    "Id": "5",
+    
     "QuestionText": "What is the penalty for failing to replace a lost headband ?",
     "GoodAnswers": [
       "Back to hoops"
@@ -995,7 +995,7 @@
     "Subject": "FieldsAndEquipment"
   },
   {
-    "Id": "6",
+    
     "QuestionText": "What is the penalty for playing with an illegal equipment ?",
     "GoodAnswers": [
       "Blue Card"
@@ -1009,7 +1009,7 @@
     "Subject": "FieldsAndEquipment"
   },
   {
-    "Id": "7",
+    
     "QuestionText": "What is the penalty for using an equipment that was specified as illegal by the tournament organisator ?",
     "GoodAnswers": [
       "Red card"
@@ -1023,7 +1023,7 @@
     "Subject": "FieldsAndEquipment"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for a third bludger interference ?",
     "GoodAnswers": [
       "Double bludger turnover",
@@ -1033,15 +1033,14 @@
     "BadAnswers": [
       "Turnover",
       "Blue Card",
-      "Yellow Card",
-      "Red Card"
+      "Yellow Card"
     ],
     "AnswerExplanation": "One of the turned over bludger should usually be the one that was on the ground.",
     "NGB": "ALL",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "What is the penalty for an improper immunity claim ?",
     "GoodAnswers": [
       "Back to hoops"
@@ -1055,7 +1054,7 @@
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "What is the penalty for a minor illegal immunity claim ?",
     "GoodAnswers": [
       "Back to hoops"
@@ -1070,7 +1069,7 @@
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "4",
+    
     "QuestionText": "What is the penalty for an illegal immunity claim ?",
     "GoodAnswers": [
       "Blue Card"
@@ -1085,7 +1084,7 @@
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "5",
+    
     "QuestionText": "What is the penalty for an immunity violation ?",
     "GoodAnswers": [
       "Blue Card"
@@ -1100,7 +1099,7 @@
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "6",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Blue beater is still immune and may retrieve the bludger"
@@ -1111,11 +1110,11 @@
     ],
     "AnswerExplanation": "Nothing in the rules prevent a player from trying to beat another immune player, as long as this does not transgress another rule.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding6",
+    "VideoName": "ImmunityAndGuarding6",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "7",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Blue beater committed an improper immunity claim and must be sent back to hoops."
@@ -1126,11 +1125,11 @@
     ],
     "AnswerExplanation": "The bludger still being live, claiming immunity is illegal. Bludger becomes dead only when it touches the ground.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding7",
+    "VideoName": "ImmunityAndGuarding7",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "8",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Blue beater committed an improper immunity claim and must be sent back to hoops."
@@ -1141,11 +1140,11 @@
     ],
     "AnswerExplanation": "The bludger still being live, claiming immunity is illegal. Bludger becomes dead only when it touches the ground.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding8",
+    "VideoName": "ImmunityAndGuarding8",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "9",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Beater that claimed immunity is immune"
@@ -1156,10 +1155,10 @@
     ],
     "AnswerExplanation": "A claim made before the opposing beater made the bludger live is valid, even if that player already started the movement.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding9"
+    "VideoName": "ImmunityAndGuarding9"
   },
   {
-    "Id": "10",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Beater that claimed immunity is beat"
@@ -1170,11 +1169,11 @@
     ],
     "AnswerExplanation": "A claim made when a bludger is live does not make the player immune to that bludger.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding10",
+    "VideoName": "ImmunityAndGuarding10",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "11",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Blue player's claim of immunity is invalid, he should be send back to hoops"
@@ -1185,11 +1184,11 @@
     ],
     "AnswerExplanation": "Blue player cannot claim immunity while 2 bludgers are dead. However, since the claim did not affect the game yet, the penalty is reduced to a minor invalid immunity claim.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding11",
+    "VideoName": "ImmunityAndGuarding11",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "12",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Claim is valid, no penalty."
@@ -1200,11 +1199,11 @@
     ],
     "AnswerExplanation": "When both beaters in a team claim immunity, one must lower his fist immediatly to avoid a penalty.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding12",
+    "VideoName": "ImmunityAndGuarding12",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "13",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "One blue beater should be penalized"
@@ -1215,11 +1214,11 @@
     ],
     "AnswerExplanation": "If no beater immediatly lowers his fist, one beater commits a minor invalid immunity claim and should be send back to hoops.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding13",
+    "VideoName": "ImmunityAndGuarding13",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "14",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "No penalty"
@@ -1231,11 +1230,11 @@
     ],
     "AnswerExplanation": "Nothing prevents the beater that did not claimed immunity to get the third bludger.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding14",
+    "VideoName": "ImmunityAndGuarding14",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "15",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "The beater that claimed immunity should be penalized"
@@ -1245,11 +1244,11 @@
     ],
     "AnswerExplanation": "It is forbidden to take any other action than retrieving the bludger when claiming immunity.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding15",
+    "VideoName": "ImmunityAndGuarding15",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "16",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "The kick was valid, no penalty."
@@ -1260,11 +1259,11 @@
     ],
     "AnswerExplanation": "Shooting the bludger is a valid way of retrieving it, so no penalty should be issued here.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding16",
+    "VideoName": "ImmunityAndGuarding16",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "17",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "The kick is valid, no penalty"
@@ -1274,11 +1273,11 @@
     ],
     "AnswerExplanation": "Kicking to the player's hoops is a valid way of retrieving the bludger",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding17",
+    "VideoName": "ImmunityAndGuarding17",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "18",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "The beater who threw the bludger commited a third bludger interference.",
@@ -1289,11 +1288,11 @@
     ],
     "AnswerExplanation": "Taking the third bludger without having used its own bludger in a valid way is a 3rd bludger interference",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding18",
+    "VideoName": "ImmunityAndGuarding18",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "19",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "The beater gathering the bludgers commits no foul"
@@ -1304,11 +1303,11 @@
     ],
     "AnswerExplanation": "As there was always 2 dead bludgers at the same time, there can be no 3rd bludger interference.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding19",
+    "VideoName": "ImmunityAndGuarding19",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "20",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "The beater who threw the bludger commited a third bludger interference."
@@ -1318,11 +1317,11 @@
     ],
     "AnswerExplanation": "Taking the third bludger without having used its own bludger in a valid way is a 3rd bludger interference",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding20",
+    "VideoName": "ImmunityAndGuarding20",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "21",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "No penalty"
@@ -1331,11 +1330,11 @@
       "The beater who threw the bludger commited a third bludger interference."
     ],
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding21",
+    "VideoName": "ImmunityAndGuarding21",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "22",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "The beater that claimed immunity should be penalized"
@@ -1345,11 +1344,11 @@
     ],
     "AnswerExplanation": "It is forbidden to take any other action than retrieving the bludger when claiming immunity.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding22",
+    "VideoName": "ImmunityAndGuarding22",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "23",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "No penalty"
@@ -1360,11 +1359,11 @@
     ],
     "AnswerExplanation": "Even when the player lowers its fist, they stay immune until they retrieve the bludger.",
     "NGB": "ALL",
-    "Link": "ImmunityAndGuarding23",
+    "VideoName": "ImmunityAndGuarding23",
     "Subject": "ImmunityAndGuarding"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for propelling a ball with the intent of sending any ball out of bounds ?",
     "GoodAnswers": [
       "Blue Card"
@@ -1379,7 +1378,7 @@
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "What is the penalty for intentionally or blatantly ignoring a “boundary” call ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -1394,7 +1393,7 @@
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "What is the penalty for intentionally or egregiously illegally going or remaining out of bounds ?",
     "GoodAnswers": [
       "Back to hoops"
@@ -1409,7 +1408,7 @@
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "4",
+    
     "QuestionText": "What is the penalty for an inbounding procedure violation ?",
     "GoodAnswers": [
       "Turnover",
@@ -1424,7 +1423,7 @@
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "5",
+    
     "QuestionText": "What is the penalty for illegally physically preventing the inbounding player from re-entering the pitch ?",
     "GoodAnswers": [
       "Back to hoops"
@@ -1439,7 +1438,7 @@
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "6",
+    
     "QuestionText": "Which way is correct to inbound a bludger?",
     "GoodAnswers": [
       "Clip1"
@@ -1449,11 +1448,11 @@
     ],
     "AnswerExplanation": "InboundingBludgerExplanation",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries6",
+    "VideoName": "OutOfBoundaries6",
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "7",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Turnover",
@@ -1466,11 +1465,11 @@
     ],
     "AnswerExplanation": "Caution: if the opposing team controls two bludgers, this bludger cannot be turned over. Only apply the back to hoops penalty in this case.",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries7",
+    "VideoName": "OutOfBoundaries7",
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "8",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Yellow player should retrieve the bludger"
@@ -1480,11 +1479,11 @@
     ],
     "AnswerExplanation": "Yellow player is closest when the bludger goes out, so she gets priority.",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries8",
+    "VideoName": "OutOfBoundaries8",
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "9",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Green player should retrieve the bludger"
@@ -1494,11 +1493,11 @@
     ],
     "AnswerExplanation": "While yellow player is closest when the bludger goes out, she is not elligible because she already owns a bludger. The next closest player is green, so she can retrieve the bludger thrown.",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries9",
+    "VideoName": "OutOfBoundaries9",
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "10",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Yellow player should retrieve the bludger"
@@ -1508,11 +1507,11 @@
     ],
     "AnswerExplanation": "As green is the closest elligible player when the bludger goes out, she is the one who can retrieve the bludger at the start. However, after the beat, the next closest elligible player become the yellow player.",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries10",
+    "VideoName": "OutOfBoundaries10",
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "11",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Yellow player should be penalized"
@@ -1523,11 +1522,11 @@
     ],
     "AnswerExplanation": "Once outside the pitch, green player becomes immune. Yellow player is willingly throwing a ball with the intention of sending it out of pitch, which is illegal. (Blue card)",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries11",
+    "VideoName": "OutOfBoundaries11",
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "12",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "No penalty"
@@ -1538,10 +1537,10 @@
     ],
     "AnswerExplanation": "A feet outside is enough for green player to become immune. Consequently, Yellow player is willingly throwing a ball with the intention of sending it out of pitch, which is illegal. (Blue card)",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries12"
+    "VideoName": "OutOfBoundaries12"
   },
   {
-    "Id": "13",
+    
     "QuestionText": "Which way is correct to inbound a quaffle?",
     "GoodAnswers": [
       "Clip 2"
@@ -1551,11 +1550,11 @@
     ],
     "AnswerExplanation": "A quaffle has to be inbounded to the point where it left the field.",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries13",
+    "VideoName": "OutOfBoundaries13",
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "14",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Turnover",
@@ -1568,11 +1567,11 @@
     ],
     "AnswerExplanation": "The quaffle cannot be thrown in. Also, the player has 5 seconds to inbound any ball.",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries14",
+    "VideoName": "OutOfBoundaries14",
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "15",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "The green player should retrieve the quaffle"
@@ -1582,11 +1581,11 @@
     ],
     "AnswerExplanation": "For the quaffle, except some specific cases, the team that can retrieve the quaffle is always the team that did not threw it outside.",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries15",
+    "VideoName": "OutOfBoundaries15",
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "16",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Green player is beat"
@@ -1597,11 +1596,11 @@
     ],
     "AnswerExplanation": "The green player does not become immune until she reaches outside the field.",
     "NGB": "ALL",
-    "Link": "OutOfBoundaries16",
+    "VideoName": "OutOfBoundaries16",
     "Subject": "OutOfBoundaries"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for changing position or location after brooms down, at the beginning of a match ?",
     "GoodAnswers": [
       "Blue Card"
@@ -1615,7 +1614,7 @@
     "Subject": "Process"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "What is the penalty for moving or taking hold of a ball during a brooms down ?",
     "GoodAnswers": [
       "Blue Card"
@@ -1630,7 +1629,7 @@
     "Subject": "Process"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "What is the penalty for an illegal timeout request ?",
     "GoodAnswers": [
       "Blue Card"
@@ -1644,7 +1643,7 @@
     "Subject": "Process"
   },
   {
-    "Id": "4",
+    
     "QuestionText": "What happens when a turnover is called, but no elligible player may receive the turned-over ball ?",
     "GoodAnswers": [
       "The ball is placed at the hoops of the fouled team"
@@ -1657,7 +1656,7 @@
     "Subject": "Process"
   },
   {
-    "Id": "5",
+    
     "QuestionText": "Two players of the same team are in the penalty box serving a yellow penalty when their team get scored against?",
     "GoodAnswers": [
       "The player with the least remaining time is released"
@@ -1670,7 +1669,7 @@
     "Subject": "Process"
   },
   {
-    "Id": "6",
+    
     "QuestionText": "A player do a blue or yellow card offense causing an advantage. After the fouled team scores, the referee gives the card to the player.",
     "GoodAnswers": [
       "The player keeps playing"
@@ -1684,7 +1683,7 @@
     "Subject": "Process"
   },
   {
-    "Id": "7",
+    
     "QuestionText": "Two opposing players have a grip on a ball when a broom's down is called. Which is correct ?",
     "GoodAnswers": [
       "Both players stay in position but cannot fight for the ball during broom's down"
@@ -1699,7 +1698,7 @@
     "Subject": "Process"
   },
   {
-    "Id": "8",
+    
     "QuestionText": "Assuming the player went in a bit farther than the official indicated, which of the following is true?",
     "GoodAnswers": [
       "No penalty"
@@ -1711,11 +1710,11 @@
     ],
     "AnswerExplanation": "While the player did not went in exactly where the official requested him to, the difference is not significant enough to warrant a penalty.",
     "NGB": "ALL",
-    "Link": "Process8",
+    "VideoName": "Process8",
     "Subject": "Process"
   },
   {
-    "Id": "9",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Repeat Procedure"
@@ -1728,11 +1727,11 @@
     ],
     "AnswerExplanation": "The KO procedure requires the player to remove their broom, touch the hoop then remount their broom. Note that affecting play after a wrong procedure would have been a yellow card.",
     "NGB": "ALL",
-    "Link": "Process9",
+    "VideoName": "Process9",
     "Subject": "Process"
   },
   {
-    "Id": "10",
+    
     "QuestionText": "Which of the followings are true?",
     "GoodAnswers": [
       "Repeat Procedure"
@@ -1745,11 +1744,11 @@
     ],
     "AnswerExplanation": "While the player start to remove its broom, the brooms does not leave their legs completely. The procedure is not correct. This is important during games where beater will want to gain time after being beat near a hoop.",
     "NGB": "ALL",
-    "Link": "Process10",
+    "VideoName": "Process10",
     "Subject": "Process"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for an illegal reset ?",
     "GoodAnswers": [
       "Turnover"
@@ -1763,7 +1762,7 @@
     "Subject": "Reset"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "What is the penalty for the Quaffle Carrier?",
     "GoodAnswers": [
       "Reset used"
@@ -1776,11 +1775,11 @@
     ],
     "AnswerExplanation": "A player physically forced behind the midfield line does not use its team's reset, under the condition that he or she makes the Quaffle cross the line back as soon as reasonnably possible.",
     "NGB": "ALL",
-    "Link": "Reset2",
+    "VideoName": "Reset2",
     "Subject": "Reset"
   },
   {
-    "Id": "5",
+    
     "QuestionText": "What is the penalty for the Quaffle Carrier?",
     "GoodAnswers": [
       "Reset used"
@@ -1794,11 +1793,11 @@
     ],
     "AnswerExplanation": "A player menaced by an opposing beater may cross the midline without it being an illegal reset, but still use a reset for his team.",
     "NGB": "ALL",
-    "Link": "Reset5",
+    "VideoName": "Reset5",
     "Subject": "Reset"
   },
   {
-    "Id": "6",
+    
     "QuestionText": "What is the penalty for the Quaffle Carrier?",
     "GoodAnswers": [
       "Reset used"
@@ -1812,11 +1811,11 @@
     ],
     "AnswerExplanation": "A player menaced by an opposing beater may cross the midline without it being an illegal reset, but still use a reset for his team.",
     "NGB": "ALL",
-    "Link": "Reset6",
+    "VideoName": "Reset6",
     "Subject": "Reset"
   },
   {
-    "Id": "7",
+    
     "QuestionText": "What is the penalty for the Quaffle Carrier?",
     "GoodAnswers": [
       "Reset used"
@@ -1829,11 +1828,11 @@
     ],
     "AnswerExplanation": "A player crossing two lines in a single run is considered having used only one reset.",
     "NGB": "ALL",
-    "Link": "Reset7",
+    "VideoName": "Reset7",
     "Subject": "Reset"
   },
   {
-    "Id": "8",
+    
     "QuestionText": "What is the penalty for the Quaffle Carrier?",
     "GoodAnswers": [
       "Reset used"
@@ -1846,11 +1845,11 @@
     ],
     "AnswerExplanation": "A player passing across two lines is considered having used only one reset, as it is a single action.",
     "NGB": "ALL",
-    "Link": "Reset8",
+    "VideoName": "Reset8",
     "Subject": "Reset"
   },
   {
-    "Id": "9",
+    
     "QuestionText": "QuestionResetRandom",
     "GoodAnswers": [
       "Turnover"
@@ -1864,11 +1863,11 @@
     ],
     "AnswerExplanation": "A player throwing behind crossing a reset line, or further into his own half, without anyone to receive perpetrates an illegal reset.",
     "NGB": "ALL",
-    "Link": "Reset9",
+    "VideoName": "Reset9",
     "Subject": "Reset"
   },
   {
-    "Id": "10",
+    
     "QuestionText": "QuestionResetRandom",
     "GoodAnswers": [
       "Turnover"
@@ -1882,11 +1881,11 @@
     ],
     "AnswerExplanation": "A player throwing behind crossing a reset line, or further into his own half, without knowing if anyone is here to receive perpetrates an illegal reset. Carefull not to penalize a player that knows where their teammates are without having to look.",
     "NGB": "ALL",
-    "Link": "Reset10",
+    "VideoName": "Reset10",
     "Subject": "Reset"
   },
   {
-    "Id": "11",
+    
     "QuestionText": "What is the penalty for the Quaffle Carrier?",
     "GoodAnswers": [
       "Reset used"
@@ -1899,11 +1898,11 @@
     ],
     "AnswerExplanation": "A player has to be there when the ball arrives for the pass to be considered valid, regardless of the state of the player at the beginning of the pass.",
     "NGB": "ALL",
-    "Link": "Reset11",
+    "VideoName": "Reset11",
     "Subject": "Reset"
   },
   {
-    "Id": "12",
+    
     "QuestionText": "What is the penalty for the quaffle carrier's team?",
     "GoodAnswers": [
       "Turnover"
@@ -1916,11 +1915,11 @@
     ],
     "AnswerExplanation": "The pass during the run back creates two separate reset actions, which triggers the illegal reset.",
     "NGB": "ALL",
-    "Link": "Reset12",
+    "VideoName": "Reset12",
     "Subject": "Reset"
   },
   {
-    "Id": "13",
+    
     "QuestionText": "What is the penalty for the Quaffle Carrier?",
     "GoodAnswers": [
       "No penalty"
@@ -1934,11 +1933,11 @@
     ],
     "AnswerExplanation": "An opposing player jerking the Quaffle behind a reset line does not trigger the reset used, as long as the driving team makes it go back as soon as possible.",
     "NGB": "ALL",
-    "Link": "Reset13",
+    "VideoName": "Reset13",
     "Subject": "Reset"
   },
   {
-    "Id": "14",
+    
     "QuestionText": "ResetDeadQuaffle",
     "GoodAnswers": [
       "Reset used"
@@ -1952,11 +1951,11 @@
     ],
     "AnswerExplanation": "A loose quaffle does not require a receiver to be reset.",
     "NGB": "ALL",
-    "Link": "Reset14",
+    "VideoName": "Reset14",
     "Subject": "Reset"
   },
   {
-    "Id": "15",
+    
     "QuestionText": "ResetAfterGetBack",
     "GoodAnswers": [
       "No penalty"
@@ -1970,11 +1969,11 @@
     ],
     "AnswerExplanation": "The player who initiates a drive may carry or propel the quaffle backward across one or both restrictor lines immediately upon the beginning of the drive without it counting as a reset.",
     "NGB": "ALL",
-    "Link": "Reset15",
+    "VideoName": "Reset15",
     "Subject": "Reset"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for goaltending ?",
     "GoodAnswers": [
       "The score is counter as good for the fouled team",
@@ -1989,7 +1988,7 @@
     "Subject": "Scoring"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "What is the penalty for illegaly resetting an opponent's hoop ?",
     "GoodAnswers": [
       "Blue Card"
@@ -2004,7 +2003,7 @@
     "Subject": "Scoring"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "What is the penalty for unintentionally dislodging hoops repeatedly ?",
     "GoodAnswers": [
       "Blue Card"
@@ -2019,7 +2018,7 @@
     "Subject": "Scoring"
   },
   {
-    "Id": "4",
+    
     "QuestionText": "What is the penalty for recklessly dislodging a hoop ?",
     "GoodAnswers": [
       "Yellow Card"
@@ -2034,7 +2033,7 @@
     "Subject": "Scoring"
   },
   {
-    "Id": "5",
+    
     "QuestionText": "What is the penalty for intentionnaly dislodging a hoop ?",
     "GoodAnswers": [
       "Red card"
@@ -2049,7 +2048,7 @@
     "Subject": "Scoring"
   },
   {
-    "Id": "6",
+    
     "QuestionText": "What is the penalty for moving a hoop intentionnaly ?",
     "GoodAnswers": [
       "Red card"
@@ -2064,7 +2063,7 @@
     "Subject": "Scoring"
   },
   {
-    "Id": "7",
+    
     "QuestionText": "QuestionBlockingScoringQuaffleText",
     "GoodAnswers": [
       "Red card"
@@ -2079,7 +2078,7 @@
     "Subject": "Scoring"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for a seeker false start ?",
     "GoodAnswers": [
       "Blue Card"
@@ -2093,7 +2092,7 @@
     "Subject": "SnitchPlay"
   },
   {
-    "Id": "2",
+    
     "QuestionText": "What of the following are true for a team that wants to decline a snitch catch ?",
     "GoodAnswers": [
       "The catch can be just after a goal and before the referee confirmed the goal as good",
@@ -2107,7 +2106,7 @@
     "Subject": "SnitchPlay"
   },
   {
-    "Id": "3",
+    
     "QuestionText": "QuestionUseBallInteractSnitchText",
     "GoodAnswers": [
       "Yellow Card"
@@ -2122,7 +2121,7 @@
     "Subject": "SnitchPlay"
   },
   {
-    "Id": "1",
+    
     "QuestionText": "What is the penalty for a substitution violation ?",
     "GoodAnswers": [
       "Repeat procedure"

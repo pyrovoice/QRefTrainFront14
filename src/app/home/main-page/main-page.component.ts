@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
 import { QuestionSubject } from 'src/app/shared/enum/question-topic.enum';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/shared/api/api.service';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss']
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent {
   sidebarOpen = true;
   questionSubject = QuestionSubject;
   topics: Array<QuestionSubject> = [QuestionSubject.Contacts, QuestionSubject.Keeper, QuestionSubject.FieldsAndEquipment, QuestionSubject.OutOfBoundaries, QuestionSubject.ImmunityAndGuarding, QuestionSubject.Reset];
@@ -17,9 +19,6 @@ export class MainPageComponent implements OnInit {
   selectedQuestionWithVideo = false;
 
   constructor(private router: Router) {
-  }
-
-  ngOnInit(): void {
   }
 
   onCheckboxChange(e) {
