@@ -4,7 +4,7 @@ import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { ConnectivityService } from './connectivity.service';
 import { ConnectionType } from './connection-type';
-import { environment } from './environment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'

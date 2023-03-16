@@ -1,5 +1,5 @@
 <nav class="navbar d-flex flex-nowrap justify-content-between align-items-stretch border-bottom">
-  <div class="flex-grow-1 strong-font px-2 mt-auto mb-auto">{{currentQuestion.questionText}}</div>
+  <div class="flex-grow-1 strong-font px-2 mt-auto mb-auto">{{(currentQuestionNb+1) + ". " + currentQuestion.questionText}}</div>
   <div title="Report question (coming later)" class="p-3 text-danger border-left btn btn-link d-none d-sm-block"><i
       class="fa-solid fa-triangle-exclamation"></i></div>
   <div title="Report question (coming later)" class="p-1 text-danger border-left btn btn-link d-block d-sm-none"><i
@@ -18,7 +18,7 @@
 
   <div class="grid">
     <label *ngFor="let a of currentQuestion.answers" class="btn btn-light mr-1 border answer-button"
-      [ngClass]="[a.isSelected ? 'answerSelected' : '']">
+      [ngClass]="[a.isSelected ? 'answerSelected' : '', a.text.length > 70 ? 'small-text' : '']">
       <input type="checkbox" id="input" [value]="a.id" [(ngModel)]="a.isSelected"><span class="">{{a.text}}</span>
     </label>
   </div>

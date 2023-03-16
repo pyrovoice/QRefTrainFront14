@@ -6,6 +6,6 @@ export class QuestionResult {
      questionSubject: QuestionSubject;
      GifName?: String;
      questionText: String;
-     answerExplanation: string;
+     AnswerExplanation: string;
      Answers: AnswerResult[];
 }

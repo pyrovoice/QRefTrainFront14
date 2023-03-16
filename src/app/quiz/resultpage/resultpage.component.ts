@@ -1,7 +1,7 @@
 import { AnswerResult } from './../../shared/model/answer-result.model';
 import { QuestionResult } from './../../shared/model/question-result';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Question } from 'src/app/shared/model/question';
 import { QuizResult } from 'src/app/shared/model/quiz-result.model';
 import { QuizService } from 'src/app/shared/service/quiz.service';
@@ -17,7 +17,7 @@ export class ResultpageComponent implements OnInit {
   currentVideoURL;
   @ViewChild('video') video!: ElementRef;
 
-  constructor(private route: ActivatedRoute, private quizService: QuizService) {
+  constructor(private route: ActivatedRoute, private quizService: QuizService, private router: Router) {
 
   }
 
@@ -33,6 +33,7 @@ export class ResultpageComponent implements OnInit {
           }
         })
       })
+      console.log(this.quizResult.QuestionsAsked)
     })
   }
 
@@ -75,4 +76,9 @@ export class ResultpageComponent implements OnInit {
   hasVideo() {
     return this.currentQuestion.GifName != null && this.currentQuestion.GifName != ""
   }
+
+  navigate(page) {
+    this.router.navigate(['/' + page]);
+  }
+
 }

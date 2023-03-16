@@ -36,6 +36,12 @@
 
 .answer-button{
   @media only screen and (max-width: 600px) {
+    font-size: small;
+  }
+}
+
+.answer-button.small-text{
+  @media only screen and (max-width: 600px) {
     font-size: x-small;
   }
 }

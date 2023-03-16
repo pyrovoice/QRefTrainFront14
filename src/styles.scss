@@ -1,22 +1,50 @@
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.d-flex{
-    display: flex;
+html,
+body {
+  height: 100%;
 }
 
-.div-button{
-    cursor: pointer;
-    background-color: white;
-  }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-  
+.d-flex {
+  display: flex;
+}
 
-  .bg-error{
-    background-color: rgb(255, 65, 65) !important;
-  }
+.div-button {
+  cursor: pointer;
+  background-color: white;
+}
 
-  
 
-  .bg-success-light{
-    background-color: #00d471 !important;
-  }
+
+.bg-error {
+  background-color: rgb(255, 65, 65) !important;
+}
+
+
+
+.bg-success-light {
+  background-color: #00d471 !important;
+}
+
+.bg-success-lighter-rad{
+  background-image: linear-gradient(rgb(215, 255, 204) 0%, rgb(149, 255, 120) 100%);
+}
+
+.bg-success-rad {
+  background-image: linear-gradient(rgb(216, 255, 205) 0%, rgb(114, 255, 75) 100%);
+}
+
+.bg-failure-rad {
+  background-image: linear-gradient(rgb(255, 177, 177) 0%, rgb(255, 59, 59) 100%);
+}
+
+.bg-neutral-rad {
+  background-image: linear-gradient(#f1f1f1 0%, rgb(184, 184, 184) 100%);
+}
+
+.bg-info-rad{
+  background-image: linear-gradient(#ffffff, #0d6efd)
+}

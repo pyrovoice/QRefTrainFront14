@@ -44,6 +44,12 @@
   
   .answer-button{
     @media only screen and (max-width: 600px) {
+      font-size: small;
+    }
+  }
+
+  .answer-button.small-text{
+    @media only screen and (max-width: 600px) {
       font-size: x-small;
     }
   }
@@ -123,4 +129,11 @@
   
   .answerSelected {
     background-color: #e2e6ea !important;
+  }
+
+  .card{
+    max-width: 50%;
+    @media only screen and (max-width: 600px) {
+      max-width: 80%;
+    }
   }

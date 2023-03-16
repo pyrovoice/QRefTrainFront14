@@ -1,22 +1,46 @@
 <ng-container *ngIf="quizResult">
     <ng-container *ngIf="!currentQuestion">
         <title>Result</title>
-        <div>{{getNumberCorrectAnswer()}} of {{quizResult.QuestionsAsked.length}} has been answered correctly</div>
-        <div>your time</div>
-        <div>Try again</div>
-        <div>Home</div>
-        <div>List of questions, clickeable to jump to that question</div>
-        <a (click)="copyResultToClipboard()">share your result</a>
-        <div class="d-flex flex-wrap">
-            <button *ngFor="let q of questions; let i = index;" (click)="setCurrentQuestion(i)"
-                [ngClass]="isGoodAnswer(q) ? 'bg-success-light' : 'bg-error'"
-                class="small-button rounded">{{i}}</button>
+        <!-- <div class="w-100 text-center">
+            <div class="d-inline-block text-center mt-5 border rounded p-3"
+                style="background-image: linear-gradient(rgb(82, 209, 255), rgb(214, 247, 255));"><span>your result
+                    is:</span><br /><span
+                    style="font-family: 'Times New Roman', Times, serif; font-size: xx-large; color: rgb(4, 127, 168);"
+                    class="pt-2">{{getNumberCorrectAnswer()}}/{{quizResult.QuestionsAsked.length}}</span></div>
+        </div> -->
+        <div class="card text-center mx-auto mt-5">
+            <h2 class="card-header mb-1">
+                Congratulation!
+            </h2>
+            <small class="">You got <span
+                    style="font-size: medium;">{{getNumberCorrectAnswer()*100/quizResult.QuestionsAsked.length}}%</span>
+                correct</small>
+            <div class="d-flex justify-content-center">
+                <div><i class="fa-solid fa-check text-success pe-1"></i>{{getNumberCorrectAnswer()}} correct</div>
+                <div class="ps-3"><i class="fa-solid fa-xmark text-danger pe-1"></i>{{quizResult.QuestionsAsked.length -
+                    getNumberCorrectAnswer()}} incorrect</div>
+            </div>
+            <div class="d-flex d-sm-none flex-wrap">
+                <button *ngFor="let q of quizResult.QuestionsAsked; let i = index;" (click)="setCurrentQuestion(i)"
+                    [ngClass]="isGoodAnswer(q) ? 'bg-success-rad' : 'bg-failure-rad'"
+                    class="small-button rounded">{{i+1}}</button>
+            </div>
+            <div class="d-flex flex-fill gap-1 justify-content-center m-1">
+                <div><button (click)="copyResultToClipboard()" class="button p-2 rounded bg-primary text-white"><i
+                            class="fa-solid fa-copy pe-2"></i><span class="">Share</span></button></div>
+                <div><button (click)="navigate('quiz')" class="button p-2 rounded bg-success-lighter-rad"><i class="fa fa-repeat pe-2"></i><span
+                            class="">Retry</span></button></div>
+            </div>
+            <div class="card-footer text-muted">
+                <button (click)="navigate('homepage')" class="button p-2 px-5 rounded bg-neutral-rad"><i
+                        class="fa fa-home pe-2"></i>Homepage</button>
+            </div>
         </div>
     </ng-container>
 
     <ng-container *ngIf="currentQuestion">
         <nav class="navbar d-flex flex-nowrap justify-content-between align-items-stretch border-bottom">
-            <div class="flex-grow-1 strong-font px-2 mt-auto mb-auto">{{currentQuestion.Id + ". " +
+            <div class="flex-grow-1 strong-font px-2 mt-auto mb-auto">{{(currentQuestionNb+1) + ". " +
                 currentQuestion.QuestionText}}</div>
             <div title="Report question (coming later)"
                 class="p-3 text-danger border-left btn btn-link d-none d-sm-block">
@@ -30,7 +54,7 @@
         </nav>
         <div class="container mt-2">
             <div class="responsive-container-mp4 mb-1" [ngClass]="[!hasVideo() ? 'd-none' : '']">
-                <video #video width="100%" height="100%" controls muted autoplay="autoplay">
+                <video #video width="100%" height="100%" controls muted [muted]="true" autoplay="autoplay">
                     <source [src]="currentVideoURL" type="video/mp4" preload="none">
                     Issue displaying video
                 </video>
@@ -38,21 +62,24 @@
 
             <div class="grid">
                 <label *ngFor="let a of currentQuestion.Answers" class="btn btn-light mr-1 border answer-button"
-                    [ngClass]="{'bg-success-light':a.isSelected && a.isGoodAnswer, 'bg-error': (a.isSelected && !a.isGoodAnswer) || (!a.isSelected && a.isGoodAnswer) }">
+                    [ngClass]="[{'bg-success-rad':a.isSelected && a.IsGoodAnswer, 
+                    'bg-failure-rad': (a.isSelected && !a.IsGoodAnswer) || (!a.isSelected && a.IsGoodAnswer),
+                'border border-dark':a.isSelected  }, a.text.length > 70 ? 'small-text' : '']">
                     {{a.Answertext}}
                 </label>
             </div>
-            <div>{{currentQuestion.answerExplanation}}</div>
+            <div class="mt-2">{{currentQuestion.AnswerExplanation}}</div>
         </div>
     </ng-container>
 
     <nav class="navbar fixed-bottom d-flex justify-content-between align-items-stretch">
         <div *ngFor="let q of this.quizResult.QuestionsAsked; let i = index"
             class="flex-grow-1 border d-none d-sm-flex div-button" [title]="q.QuestionText"
-            [ngClass]="isGoodAnswer(q) ? 'bg-success-light' : 'bg-error'" (click)="setCurrentQuestion(i)">{{i + 1}}
+            [ngClass]="isGoodAnswer(q) ? 'bg-success-rad' : 'bg-failure-rad'" (click)="setCurrentQuestion(i)">{{i + 1}}
         </div>
-        <div class="flex-grow-1 border flex-basis div-button " (click)="moveCurrentQuestion(1)">Next</div>
-        <div class="flex-grow-1 border flex-basis div-button result-button" (click)="currentQuestionNb = null">Result
+        <div class="flex-grow-1 border flex-basis div-button bg-neutral-rad" (click)="moveCurrentQuestion(1)">Next</div>
+        <div class="flex-grow-1 border flex-basis div-button result-button bg-neutral-rad"
+            (click)="currentQuestionNb = null">Result
         </div>
     </nav>
 </ng-container>
