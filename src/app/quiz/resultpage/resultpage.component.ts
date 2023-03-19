@@ -33,7 +33,6 @@ export class ResultpageComponent implements OnInit {
           }
         })
       })
-      console.log(this.quizResult.QuestionsAsked)
     })
   }
 
@@ -50,7 +49,6 @@ export class ResultpageComponent implements OnInit {
   }
 
   get currentQuestion(): QuestionResult {
-    console.log(this.quizResult.QuestionsAsked[this.currentQuestionNb])
     return this.quizResult.QuestionsAsked[this.currentQuestionNb]
   }
 
@@ -68,7 +66,6 @@ export class ResultpageComponent implements OnInit {
 
   updateURL() {
     this.currentVideoURL = "assets/videos/" + this.currentQuestion.GifName + ".mp4"
-    console.log(this.currentVideoURL);
     if (this.hasVideo() && this.video) {
       this.video.nativeElement.load();
     }

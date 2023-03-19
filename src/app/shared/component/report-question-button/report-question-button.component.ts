@@ -1,24 +1,20 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { PopupReportQuestionComponent } from '../popup-report-question/popup-report-question.component';
 
 @Component({
   selector: 'app-report-question-button',
   templateUrl: './report-question-button.component.html'
 })
-export class ReportQuestionComponent  {
+export class ReportQuestionComponent {
 
   @Input() questionId;
   constructor(public dialog: MatDialog) { }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(PopupReportQuestionComponent, {
+    this.dialog.open(PopupReportQuestionComponent, {
       width: '350px',
-      data: {questionId: this.questionId}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed', result);
+      data: { questionId: this.questionId }
     });
   }
 }

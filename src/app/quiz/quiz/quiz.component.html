@@ -1,34 +1,36 @@
-<nav class="navbar d-flex flex-nowrap justify-content-between align-items-stretch border-bottom">
-  <div class="flex-grow-1 strong-font px-2 mt-auto mb-auto">{{(currentQuestionNb+1) + ". " +
-    currentQuestion.questionText}}</div>
-  <app-report-question-button [questionId]="currentQuestion.id"></app-report-question-button>
-</nav>
-<div class="container mt-2">
+<h1 *ngIf="questions.length == 0" class="position-absolute top-50 w-100 text-center">Loading</h1>
+<div *ngIf="questions.length != 0">
+  <nav class="navbar d-flex flex-nowrap justify-content-between align-items-stretch border-bottom">
+    <div class="flex-grow-1 strong-font px-2 mt-auto mb-auto">{{(currentQuestionNb+1) + ". " +
+      currentQuestion.questionText}}</div>
+    <app-report-question-button [questionId]="currentQuestion.id"></app-report-question-button>
+  </nav>
+  <div class="container mt-2">
+    <div class="responsive-container-mp4 mb-1">
+      <video #video width="100%" height="100%" controls muted autoplay="autoplay"
+        [ngClass]="[!hasVideo() ? 'd-none' : '']">
+        <source [src]="currentVideoURL" type="video/mp4" preload="none">
+        Issue displaying video
+      </video>
+    </div>
 
-  <div class="responsive-container-mp4 mb-1">
-    <video #video width="100%" height="100%" controls muted autoplay="autoplay"
-      [ngClass]="[!hasVideo() ? 'd-none' : '']">
-      <source [src]="currentVideoURL" type="video/mp4" preload="none">
-      Issue displaying video
-    </video>
+    <div class="grid">
+      <label *ngFor="let a of currentQuestion.answers" class="btn btn-light mr-1 border answer-button"
+        [ngClass]="[a.isSelected ? 'answerSelected' : '', a.text.length > 70 ? 'small-text' : '']">
+        <input type="checkbox" id="input" [value]="a.id" [(ngModel)]="a.isSelected"><span class="">{{a.text}}</span>
+      </label>
+    </div>
   </div>
-
-  <div class="grid">
-    <label *ngFor="let a of currentQuestion.answers" class="btn btn-light mr-1 border answer-button"
-      [ngClass]="[a.isSelected ? 'answerSelected' : '', a.text.length > 70 ? 'small-text' : '']">
-      <input type="checkbox" id="input" [value]="a.id" [(ngModel)]="a.isSelected"><span class="">{{a.text}}</span>
-    </label>
-  </div>
+  <nav class="navbar fixed-bottom d-flex justify-content-between align-items-stretch">
+    <div class="flex-grow-1 border flex-basis div-button" (click)="moveCurrentQuestion(-1)">Previous</div>
+    <div *ngFor="let q of questions; let i = index" class="flex-grow-1 border d-none d-sm-flex div-button"
+      [title]="q.questionText" [ngClass]="isQuestionCurrentlySelected(i) ? 'bg-secondary' : ''"
+      (click)="setCurrentQuestion(i)">{{i + 1}}</div>
+    <div class="d-block d-sm-none flex-grow-1 border flex-basis div-button">
+      {{(questions.indexOf(currentQuestion)+1)+'/'+questions.length}}</div>
+    <div *ngIf="isCurrentLastQuestion()" class="flex-grow-1 border flex-basis div-button "
+      (click)="moveCurrentQuestion(1)">Next</div>
+    <div *ngIf="!isCurrentLastQuestion();" class="flex-grow-1 border flex-basis div-button result-button bg-warning"
+      (click)="goToResult()">Finish</div>
+  </nav>
 </div>
-<nav class="navbar fixed-bottom d-flex justify-content-between align-items-stretch">
-  <div class="flex-grow-1 border flex-basis div-button" (click)="moveCurrentQuestion(-1)">Previous</div>
-  <div *ngFor="let q of questions; let i = index" class="flex-grow-1 border d-none d-sm-flex div-button"
-    [title]="q.questionText" [ngClass]="isQuestionCurrentlySelected(i) ? 'bg-secondary' : ''"
-    (click)="setCurrentQuestion(i)">{{i + 1}}</div>
-  <div class="d-block d-sm-none flex-grow-1 border flex-basis div-button">
-    {{(questions.indexOf(currentQuestion)+1)+'/'+questions.length}}</div>
-  <div *ngIf="isCurrentLastQuestion()" class="flex-grow-1 border flex-basis div-button "
-    (click)="moveCurrentQuestion(1)">Next</div>
-  <div *ngIf="!isCurrentLastQuestion();" class="flex-grow-1 border flex-basis div-button result-button bg-warning"
-    (click)="goToResult()">Finish</div>
-</nav>

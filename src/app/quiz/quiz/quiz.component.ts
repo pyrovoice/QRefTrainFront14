@@ -50,11 +50,8 @@ export class QuizComponent implements OnInit {
         question.URLVideo = q.GifName;
         this.questions.push(question);
       });
+      this.setCurrentQuestion(0);
     })
-  }
-
-  ngAfterViewInit() {
-    this.updateURL();
   }
 
   getQuestionsFromDTO(questionDTOs: QuestionListDTO) {
