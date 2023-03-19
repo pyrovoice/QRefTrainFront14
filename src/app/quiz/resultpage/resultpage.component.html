@@ -28,8 +28,8 @@
             <div class="d-flex flex-fill gap-1 justify-content-center m-1">
                 <div><button (click)="copyResultToClipboard()" class="button p-2 rounded bg-primary text-white"><i
                             class="fa-solid fa-copy pe-2"></i><span class="">Share</span></button></div>
-                <div><button (click)="navigate('quiz')" class="button p-2 rounded bg-success-lighter-rad"><i class="fa fa-repeat pe-2"></i><span
-                            class="">Retry</span></button></div>
+                <div><button (click)="navigate('quiz')" class="button p-2 rounded bg-success-lighter-rad"><i
+                            class="fa fa-repeat pe-2"></i><span class="">Retry</span></button></div>
             </div>
             <div class="card-footer text-muted">
                 <button (click)="navigate('homepage')" class="button p-2 px-5 rounded bg-neutral-rad"><i
@@ -42,15 +42,7 @@
         <nav class="navbar d-flex flex-nowrap justify-content-between align-items-stretch border-bottom">
             <div class="flex-grow-1 strong-font px-2 mt-auto mb-auto">{{(currentQuestionNb+1) + ". " +
                 currentQuestion.QuestionText}}</div>
-            <div title="Report question (coming later)"
-                class="p-3 text-danger border-left btn btn-link d-none d-sm-block">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-            </div>
-            <div title="Report question (coming later)"
-                class="p-1 text-danger border-left btn btn-link d-block d-sm-none">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <div class="">Report</div>
-            </div>
+            <app-report-question-button [questionId="currentQuestion.Id"]></app-report-question-button>
         </nav>
         <div class="container mt-2">
             <div class="responsive-container-mp4 mb-1" [ngClass]="[!hasVideo() ? 'd-none' : '']">

@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Thanks for your help!</h2>
+<div><mat-form-field appearance="fill">
+        <mat-label>Issue</mat-label>
+        <mat-select [(ngModel)]="data.subject">
+            <mat-option *ngFor="let s of subjects" [value]="s">
+                {{s}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div class="w-100">
+    <mat-form-field class="w-100">
+        <mat-label>Details</mat-label>
+        <textarea matInput placeholder="Video is missing/Video cannot be played/Video quality too low.." value="details"
+            [(ngModel)]="data.details"></textarea>
+    </mat-form-field>
+</div>
+<div class="end"><button mat-raised-button color="primary" (click)="onValidate()">Send</button></div>

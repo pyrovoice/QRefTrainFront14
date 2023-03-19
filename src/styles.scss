@@ -29,7 +29,7 @@ body {
   background-color: #00d471 !important;
 }
 
-.bg-success-lighter-rad{
+.bg-success-lighter-rad {
   background-image: linear-gradient(rgb(215, 255, 204) 0%, rgb(149, 255, 120) 100%);
 }
 
@@ -45,6 +45,12 @@ body {
   background-image: linear-gradient(#f1f1f1 0%, rgb(184, 184, 184) 100%);
 }
 
-.bg-info-rad{
+.bg-info-rad {
   background-image: linear-gradient(#ffffff, #0d6efd)
+}
+
+.small-on-mobile {
+  @media only screen and (max-width: 600px) {
+    font-size: x-small;
+  }
 }
