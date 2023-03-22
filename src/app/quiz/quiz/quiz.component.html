@@ -1,4 +1,8 @@
-<h1 *ngIf="questions.length == 0" class="position-absolute top-50 w-100 text-center">Loading</h1>
+<div *ngIf="questions.length == 0" class="position-absolute top-50 w-100 text-center">
+  <h1>Loading</h1>
+  <br />
+  <small>Multiple options are possible.</small>
+</div>
 <div *ngIf="questions.length != 0">
   <nav class="navbar d-flex flex-nowrap justify-content-between align-items-stretch border-bottom">
     <div class="flex-grow-1 strong-font px-2 mt-auto mb-auto">{{(currentQuestionNb+1) + ". " +
@@ -21,16 +25,16 @@
       </label>
     </div>
   </div>
-  <nav class="navbar fixed-bottom d-flex justify-content-between align-items-stretch">
-    <div class="flex-grow-1 border flex-basis div-button" (click)="moveCurrentQuestion(-1)">Previous</div>
-    <div *ngFor="let q of questions; let i = index" class="flex-grow-1 border d-none d-sm-flex div-button"
+  <nav class="navbar fixed-bottom d-flex justify-content-between align-items-stretch flex-nowrap">
+    <div class="border flex-grow-1 flex-shrink-0 div-button" (click)="moveCurrentQuestion(-1)">Previous</div>
+    <div *ngFor="let q of questions; let i = index" class="flex-grow-1 flex-shrink-1 border d-none d-sm-flex div-button"
       [title]="q.questionText" [ngClass]="isQuestionCurrentlySelected(i) ? 'bg-secondary' : ''"
       (click)="setCurrentQuestion(i)">{{i + 1}}</div>
-    <div class="d-block d-sm-none flex-grow-1 border flex-basis div-button">
+    <div class="d-block d-sm-none border flex-shrink-0 div-button">
       {{(questions.indexOf(currentQuestion)+1)+'/'+questions.length}}</div>
-    <div *ngIf="isCurrentLastQuestion()" class="flex-grow-1 border flex-basis div-button "
+    <div *ngIf="isCurrentLastQuestion()" class="border flex-grow-1  flex-shrink-0 div-button "
       (click)="moveCurrentQuestion(1)">Next</div>
-    <div *ngIf="!isCurrentLastQuestion();" class="flex-grow-1 border flex-basis div-button result-button bg-warning"
+    <div *ngIf="!isCurrentLastQuestion();" class="border flex-grow-1 flex-shrink-0 div-button result-button bg-warning"
       (click)="goToResult()">Finish</div>
   </nav>
 </div>

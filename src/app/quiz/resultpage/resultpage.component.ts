@@ -53,7 +53,10 @@ export class ResultpageComponent implements OnInit {
   }
 
   moveCurrentQuestion(i) {
-    if (this.currentQuestionNb + i >= 0 && this.currentQuestionNb + i < this.quizResult.QuestionsAsked.length) {
+    if (this.currentQuestionNb == null) {
+      i > 0 ? this.setCurrentQuestion(0) : this.setCurrentQuestion(this.quizResult.QuestionsAsked.length - 1)
+    }
+    else if (this.currentQuestionNb + i >= 0 && this.currentQuestionNb + i < this.quizResult.QuestionsAsked.length) {
       this.setCurrentQuestion(this.currentQuestionNb + i);
     } else {
       this.currentQuestionNb = null;

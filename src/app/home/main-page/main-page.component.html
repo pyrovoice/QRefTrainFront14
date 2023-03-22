@@ -6,26 +6,26 @@
         <li class="nav-item active">
           <a class="nav-link pl-0" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link"(click)="startQuiz()">Quiz</a>
+        <!-- <li class="nav-item">
+          <a class="nav-link" (click)="startQuiz()">Quiz</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" (click)="startStrategy()">Strategy</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  (click)="startQuestionList()">Question list</a>
+          <a class="nav-link" (click)="startQuestionList()">Question list</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  (click)="startMatchAnalysis()">Match Analysis</a>
-        </li>
+          <a class="nav-link" (click)="startMatchAnalysis()">Match Analysis</a>
+        </li> -->
       </ul>
     </div>
   </nav>
-  <mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav mode="over" [(opened)]="sidebarOpen" >
+  <!-- <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="over" [(opened)]="sidebarOpen">
       Sidenav content
     </mat-sidenav>
-  </mat-sidenav-container>
+  </mat-sidenav-container> -->
 
 
   <div class="text-left">
@@ -34,29 +34,21 @@
         Start a Quiz
       </button>
     </div>
-    <div>
+    <!-- <div>
       <button class="btn btn-link mb-3" (click)="toggleDisplayOptions()">
         Show more options
       </button>
     </div>
-    <label *ngIf="displayOptions" class="btn btn-secondary short-label" [ngClass]="{ selected: selectedQuestionWithVideo }">
-      <input type="checkbox" name="whatevs"  [checked]="selectedQuestionWithVideo" (change)="selectedQuestionWithVideo = !selectedQuestionWithVideo">
+    <label *ngIf="displayOptions" class="btn btn-secondary short-label"
+      [ngClass]="{ selected: selectedQuestionWithVideo }">
+      <input type="checkbox" name="whatevs" [checked]="selectedQuestionWithVideo"
+        (change)="selectedQuestionWithVideo = !selectedQuestionWithVideo">
       Video only</label>
-    <div
-      *ngIf="displayOptions"
-      class="d-flex flex-row  flex-wrap"
-    >
-      <label
-        *ngFor="let topic of topics"
-        class="btn btn-secondary short-label mr-1"
-        [ngClass]="{ selected: isSelected(topic) }"
-      >
-        <input
-          type="checkbox"
-          [value]="topic"
-          (change)="onCheckboxChange($event)"
-        />{{ topic }}
+    <div *ngIf="displayOptions" class="d-flex flex-row  flex-wrap">
+      <label *ngFor="let topic of topics" class="btn btn-secondary short-label mr-1"
+        [ngClass]="{ selected: isSelected(topic) }">
+        <input type="checkbox" [value]="topic" (change)="onCheckboxChange($event)" />{{ topic }}
       </label>
-    </div>
+    </div> -->
   </div>
 </div>

@@ -1,6 +1,9 @@
 html,
 body {
-  height: 100%;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 body {
@@ -52,5 +55,20 @@ body {
 .small-on-mobile {
   @media only screen and (max-width: 600px) {
     font-size: small;
+  }
+}
+
+.answer-button{
+  @media only screen and (max-width: 720px) {
+    font-size: small !important;
+  }
+}
+
+.answer-button.small-text{
+  @media only screen and (max-width: 768px) {
+    font-size: small !important;
+  }
+  @media only screen and (max-width: 720px) {
+    font-size: x-small !important;
   }
 }

@@ -57,8 +57,8 @@
                 <label *ngFor="let a of currentQuestion.Answers" class="btn btn-light mr-1 border answer-button"
                     [ngClass]="[(a.isSelected && a.IsGoodAnswer) ? 'bg-success-rad' : '',
                     (a.isSelected && !a.IsGoodAnswer) || (!a.isSelected && a.IsGoodAnswer) ? 'bg-failure-rad' : '',
-                    (a.isSelected && !a.IsGoodAnswer) || (!a.isSelected && a.IsGoodAnswer) ? 'border border-dark' : '', 
-                    (a.text && a.text.length > 70) ? 'small-text' : '']">
+                    a.isSelected ? 'border border-dark' : '', 
+                    (a.Answertext && a.Answertext.length > 70) ? 'small-text' : '']">
                     {{a.Answertext}}
                 </label>
             </div>
@@ -67,13 +67,14 @@
     </ng-container>
 
     <nav class="navbar fixed-bottom d-flex justify-content-between align-items-stretch">
+        <div class="border d-flex d-sm-none flex-grow-1 flex-shrink-0 bg-neutral-rad" (click)="moveCurrentQuestion(-1)">Previous</div>
         <div *ngFor="let q of this.quizResult.QuestionsAsked; let i = index"
-            class="flex-grow-1 border d-none d-sm-flex div-button" [title]="q.QuestionText"
+            class="border d-none d-sm-flex flex-grow-1 " [title]="q.QuestionText"
             [ngClass]="isGoodAnswer(q) ? 'bg-success-rad' : 'bg-failure-rad'" (click)="setCurrentQuestion(i)">{{i + 1}}
         </div>
-        <div class="flex-grow-1 border flex-basis div-button bg-neutral-rad" (click)="moveCurrentQuestion(1)">Next</div>
-        <div class="flex-grow-1 border flex-basis div-button result-button bg-neutral-rad"
-            (click)="currentQuestionNb = null">Result
+        <div class=" border flex-grow-1 flex-shrink-0 bg-neutral-rad" (click)="moveCurrentQuestion(1)">Next</div>
+        <div class=" border flex-grow-1 flex-shrink-0 result-button bg-neutral-rad" (click)="currentQuestionNb = null">
+            Result
         </div>
     </nav>
 </ng-container>
