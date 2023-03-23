@@ -13,44 +13,24 @@ import { HttpHeaders } from '@angular/common/http';
 export class MainPageComponent {
   sidebarOpen = true;
   questionSubject = QuestionSubject;
-  topics: Array<QuestionSubject> = [QuestionSubject.Contacts, QuestionSubject.Keeper, QuestionSubject.FieldsAndEquipment, QuestionSubject.OutOfBoundaries, QuestionSubject.ImmunityAndGuarding, QuestionSubject.Reset];
-  displayOptions = false;
-  selectedOptions = [];
-  selectedQuestionWithVideo = false;
+  topics: Array<QuestionSubject> = [QuestionSubject.Assistref, QuestionSubject.Headref];
 
   constructor(private router: Router) {
   }
 
-  onCheckboxChange(e) {
-    let val = QuestionSubject[e.target.value];
-    if(this.selectedOptions.indexOf(val) == -1){
-      this.selectedOptions.push(val);
-    }else{
-      this.selectedOptions.splice(this.selectedOptions.indexOf(val), 1);
-    }
+  startQuiz(selectedOption) {
+    this.router.navigate(['/quiz'], { queryParams: { topic: selectedOption } });
   }
 
-  toggleDisplayOptions() {
-    this.displayOptions = !this.displayOptions;
-  }
-
-  startQuiz(){
-    this.router.navigate(['/quiz'], { queryParams: { topic: this.selectedOptions, selectedQuestionWithVideo: this.selectedQuestionWithVideo } });
-  }
-
-  startStrategy(){
+  startStrategy() {
     this.router.navigate(['/strategy']);
   }
 
-  startQuestionList(){
+  startQuestionList() {
     this.router.navigate(['/questionlist']);
   }
 
-  startMatchAnalysis(){
+  startMatchAnalysis() {
     this.router.navigate(['/matchevent']);
-  }
-
-  isSelected(value){
-    return this.selectedOptions.indexOf(value) != -1;
   }
 }

@@ -44,6 +44,11 @@
 
 }
 
+.navbar.fixed-bottom {
+  cursor: pointer;
+  user-select: none; 
+}
+
 .responsive-container {
   position: relative;
   overflow: hidden;

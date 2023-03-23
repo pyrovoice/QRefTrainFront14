@@ -16,5 +16,8 @@ export enum QuestionSubject {
   NHNF = "NHNF",
   KO = "KO",
   Other = "Other",
-  BallInteraction = "BallInteraction"
+  BallInteraction = "BallInteraction",
+  Assistref = "Assistref",
+  Snitchref = "Snitchref",
+  Headref = "Headref"
 }

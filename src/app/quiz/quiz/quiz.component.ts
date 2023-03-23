@@ -31,8 +31,7 @@ export class QuizComponent implements OnInit {
     let selectedOptions;
     let withVideo;
     this.route.queryParamMap.subscribe(params => selectedOptions = params.getAll('topic'));
-    this.route.queryParamMap.subscribe(params => withVideo = params.get('selectedQuestionWithVideo') == "true");
-    this.quizService.getQuiz(10, selectedOptions, withVideo).subscribe((quiz) => {
+    this.quizService.getQuiz(10, selectedOptions).subscribe((quiz) => {
       this.quiz = quiz;
       quiz.Questions.forEach(q => {
         let question = new Question();

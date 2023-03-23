@@ -20,6 +20,11 @@
   background-color: #f8f9fa;
 }
 
+.navbar.fixed-bottom {
+  cursor: pointer;
+  user-select: none; 
+}
+
 .grid{
   display: grid;
   grid-template-areas: "a a";

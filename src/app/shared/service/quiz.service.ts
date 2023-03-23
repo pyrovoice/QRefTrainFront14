@@ -17,8 +17,8 @@ export class QuizService {
 
   constructor(private apiService: ApiService) { }
 
-  getQuiz(nbr: number, topics: QuestionSubject[], withVideo: boolean): Observable<Quiz> {
-    return this.apiService.post<Quiz, null>('Quiz/StartTestQuiz', null);
+  getQuiz(nbr: number, topics: QuestionSubject[]): Observable<Quiz> {
+    return this.apiService.post<Quiz, QuestionSubject[]>('Quiz/StartTestQuiz', topics);
   }
 
   correctQuiz(questions: Question[], quizId: number): Observable<number>{

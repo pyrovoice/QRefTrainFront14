@@ -26,15 +26,15 @@
     </div>
   </div>
   <nav class="navbar fixed-bottom d-flex justify-content-between align-items-stretch flex-nowrap">
-    <div class="border flex-grow-1 flex-shrink-0 div-button" (click)="moveCurrentQuestion(-1)">Previous</div>
-    <div *ngFor="let q of questions; let i = index" class="flex-grow-1 flex-shrink-1 border d-none d-sm-flex div-button"
+    <div class="border flex-grow-1 flex-shrink-0 " (click)="moveCurrentQuestion(-1)">Previous</div>
+    <div *ngFor="let q of questions; let i = index" class="flex-grow-1 flex-shrink-1 border d-none d-sm-flex "
       [title]="q.questionText" [ngClass]="isQuestionCurrentlySelected(i) ? 'bg-secondary' : ''"
       (click)="setCurrentQuestion(i)">{{i + 1}}</div>
-    <div class="d-block d-sm-none border flex-shrink-0 div-button">
+    <div class="d-block d-sm-none border flex-shrink-0 ">
       {{(questions.indexOf(currentQuestion)+1)+'/'+questions.length}}</div>
-    <div *ngIf="isCurrentLastQuestion()" class="border flex-grow-1  flex-shrink-0 div-button "
+    <div *ngIf="isCurrentLastQuestion()" class="border flex-grow-1  flex-shrink-0  "
       (click)="moveCurrentQuestion(1)">Next</div>
-    <div *ngIf="!isCurrentLastQuestion();" class="border flex-grow-1 flex-shrink-0 div-button result-button bg-warning"
+    <div *ngIf="!isCurrentLastQuestion();" class="border flex-grow-1 flex-shrink-0  result-button bg-warning"
       (click)="goToResult()">Finish</div>
   </nav>
 </div>

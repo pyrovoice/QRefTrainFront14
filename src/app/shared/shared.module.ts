@@ -11,6 +11,7 @@ import { PopupReportQuestionComponent } from './component/popup-report-question/
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatButtonModule } from '@angular/material/button';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
         MatDialogModule,
         MatFormFieldModule,
         MatInputModule,
-        MatButtonModule
+        MatButtonModule,
+        TranslateModule
     ],
     exports: [
         CommonModule,
@@ -42,7 +44,8 @@ import { MatButtonModule } from '@angular/material/button';
         PopupReportQuestionComponent,
         MatFormFieldModule,
         MatInputModule,
-        MatButtonModule
+        MatButtonModule,
+        TranslateModule
     ],
     providers: [
         UntypedFormBuilder
