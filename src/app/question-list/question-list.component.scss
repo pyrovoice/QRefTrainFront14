@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+}
+
+.w-50 {
+    width: 49% !important
+}
+.content{
+    flex: 1 1 auto;
+    overflow-y: auto;
+    min-height: 0px;
+}
+
+#scroller {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    min-height: 0px
+}

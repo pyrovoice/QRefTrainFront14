@@ -13,6 +13,7 @@ import { Quiz } from '../model/quiz.model';
   providedIn: 'root'
 })
 export class QuizService {
+
   private static readonly commonAnswers = ["no penalty", "back to hoops", "turnover", "blue card", "yellow card", "red card"];
 
   constructor(private apiService: ApiService) { }
@@ -21,12 +22,16 @@ export class QuizService {
     return this.apiService.post<Quiz, QuestionSubject[]>('Quiz/StartTestQuiz', topics);
   }
 
-  correctQuiz(questions: Question[], quizId: number): Observable<number>{
-    return this.apiService.post<number, any>('Quiz/ResolveQuiz', {questions, quizId});
+  correctQuiz(questions: Question[], quizId: number): Observable<number> {
+    return this.apiService.post<number, any>('Quiz/ResolveQuiz', { questions, quizId });
   }
 
-  getQuizResult(resultId: number): Observable<QuizResult>{
-    return this.apiService.get<QuizResult>('Quiz/GetResult', {resultId: resultId});
+  getQuizResult(resultId: number): Observable<QuizResult> {
+    return this.apiService.get<QuizResult>('Quiz/GetResult', { resultId: resultId });
+  }
+
+  getAllQuestions(): Observable<QuestionResult[]> {
+    return this.apiService.get<QuestionResult[]>('Quiz/GetAllQuestions', {});
   }
 
   sortAnswer(questionToSort: Question) {
@@ -35,7 +40,7 @@ export class QuizService {
       let bText = b.text.toLowerCase();
       if (QuizService.commonAnswers.includes(aText)) {
         if (QuizService.commonAnswers.includes(bText)) {
-          return QuizService.commonAnswers.indexOf(aText) -QuizService.commonAnswers.indexOf(bText)
+          return QuizService.commonAnswers.indexOf(aText) - QuizService.commonAnswers.indexOf(bText)
         } else {
           return -1;
         }

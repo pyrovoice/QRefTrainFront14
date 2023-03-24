@@ -1,3 +1,4 @@
+import { QuestionListComponent } from './question-list/question-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   {
     path: 'matchanalysis', loadChildren: () => import('./matchanalysis/matchanalysis.module').then(m => m.MatchanalysisModule)
   },
+  { path: 'question-list', component: QuestionListComponent },
   {
     path: '', redirectTo: 'homepage', pathMatch: 'full'
   },

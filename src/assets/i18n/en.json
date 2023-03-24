@@ -1,4 +1,11 @@
 {
 	"Assistref": "Assist Ref",
-	"Headref": "Head Ref"
+	"BallInteraction": "Ball Interaction",
+	"DelayOfGame": "Delay of game",
+	"FieldsAndEquipment": "Field & equipment",
+	"Flagref": "Flag ref",
+	"Headref": "Head Ref",
+	"ImmunityAndGuarding": "Immunity & Guarding",
+	"OutOfBoundaries": "Boundaries and balls",
+	"SnitchPlay": "Snitch play"
 }

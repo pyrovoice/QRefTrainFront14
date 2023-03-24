@@ -1,0 +1,25 @@
+<div class="d-flex flex-column h-100">
+    <div class="d-flex flex-row ">
+        <div class="my-auto p-2">Select a tag</div>
+        <form *ngIf="tagOptions != null && tagOptions.size > 0" class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Tag</mat-label>
+                <input type="text" placeholder="Pick one" aria-label="Tag" matInput [formControl]="tagControl"
+                    [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option | translate}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
+    </div>
+
+    <div class="content">
+        <div #scroller class="d-flex flex-wrap mb-1">
+            <div *ngFor="let q of filterQuestionsList" class="w-50 mb-1">
+                <app-question-full-info [question]="q"></app-question-full-info>
+            </div>
+        </div>
+    </div>
+</div>

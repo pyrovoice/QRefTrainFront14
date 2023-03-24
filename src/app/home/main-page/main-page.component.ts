@@ -18,6 +18,9 @@ export class MainPageComponent {
   constructor(private router: Router) {
   }
 
+  loadPage(selectedOption) {
+    this.router.navigate(['/' + selectedOption]);
+  }
   startQuiz(selectedOption) {
     this.router.navigate(['/quiz'], { queryParams: { topic: selectedOption } });
   }

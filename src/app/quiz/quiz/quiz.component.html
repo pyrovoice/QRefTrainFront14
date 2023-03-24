@@ -18,8 +18,8 @@
       </video>
     </div>
 
-    <div class="grid">
-      <label *ngFor="let a of currentQuestion.answers" class="btn btn-light mr-1 border answer-button"
+    <div class="answer-grid">
+      <label *ngFor="let a of currentQuestion.answers" class="btn btn-light mr-1 border"
         [ngClass]="[a.isSelected ? 'answerSelected' : '', a.text.length > 70 ? 'small-text' : '']">
         <input type="checkbox" id="input" [value]="a.id" [(ngModel)]="a.isSelected"><span class="">{{a.text}}</span>
       </label>

@@ -12,11 +12,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatTableModule } from '@angular/material/table';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { QuestionFullInfoComponent } from './component/question-full-info/question-full-info.component';
 
 @NgModule({
     declarations: [
         ReportQuestionComponent,
-        PopupReportQuestionComponent
+        PopupReportQuestionComponent,
+        QuestionFullInfoComponent
 
     ],
     imports: [
@@ -31,7 +35,9 @@ import { TranslateModule } from '@ngx-translate/core';
         MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
-        TranslateModule
+        TranslateModule,
+        MatTableModule,
+        MatAutocompleteModule
     ],
     exports: [
         CommonModule,
@@ -45,7 +51,10 @@ import { TranslateModule } from '@ngx-translate/core';
         MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
-        TranslateModule
+        TranslateModule,
+        MatTableModule,
+        MatAutocompleteModule,
+        QuestionFullInfoComponent
     ],
     providers: [
         UntypedFormBuilder
