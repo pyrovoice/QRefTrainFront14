@@ -1,6 +1,10 @@
 <div class="card">
-    <div class="card-header">{{question.QuestionText}} <small
-            class="card-subtitle mb-2 text-muted">{{question.Id}}</small></div>
+    <div class="d-flex justify-content-between card-header">
+        <div class="">{{question.QuestionText}} <small class="card-subtitle mb-2 text-muted">{{question.Id}}</small>
+        </div>
+        <div><app-report-question-button [questionId]="question.Id"></app-report-question-button></div>
+    </div>
+
 
     <div class="responsive-container-mp4 mb-1">
         <video *ngIf="question.GifName" #video width="100%" height="100%" controls muted>
@@ -10,8 +14,7 @@
     </div>
     <div class="card-body">
         <div class="answer-grid">
-            <label *ngFor="let a of question.Answers" class="btn btn-light mr-1 border answer-button"
-                [ngClass]="[(a.IsGoodAnswer) ? 'bg-success-rad' : '',
+            <label *ngFor="let a of question.Answers" class="btn btn-light mr-1 border answer-button" [ngClass]="[(a.IsGoodAnswer) ? 'bg-success-rad' : '',
                 (a.Answertext && a.Answertext.length > 70) ? 'small-text' : '']">
                 {{a.Answertext}}
             </label>

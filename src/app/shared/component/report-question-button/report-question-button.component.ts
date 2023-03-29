@@ -4,7 +4,8 @@ import { PopupReportQuestionComponent } from '../popup-report-question/popup-rep
 
 @Component({
   selector: 'app-report-question-button',
-  templateUrl: './report-question-button.component.html'
+  templateUrl: './report-question-button.component.html',
+  styleUrls: ['./report-question-button.component.scss']
 })
 export class ReportQuestionComponent {
 

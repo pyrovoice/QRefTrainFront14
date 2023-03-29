@@ -1,4 +1,4 @@
-<h1 *ngIf="!quizResult" class="position-absolute top-50 w-100 text-center">Loading</h1>
+<h1 *ngIf="!quizResult" class="position-absolute top-50 w-100 text-center"><i class="fas fa-spinner fa-spin"></i></h1>
 <ng-container *ngIf="quizResult">
     <ng-container *ngIf="!currentQuestion">
         <title>Result</title>

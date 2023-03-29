@@ -1,5 +1,7 @@
 <div class="d-flex flex-column h-100">
     <div class="d-flex flex-row ">
+        <div class="m-1 me-5"><i class="fa fa-home fa-3x" aria-hidden="true"></i>
+        </div>
         <div class="my-auto p-2">Select a tag</div>
         <form *ngIf="tagOptions != null && tagOptions.size > 0" class="example-form">
             <mat-form-field class="example-full-width" appearance="fill">
@@ -16,8 +18,8 @@
     </div>
 
     <div class="content">
-        <div #scroller class="d-flex flex-wrap mb-1">
-            <div *ngFor="let q of filterQuestionsList" class="w-50 mb-1">
+        <div class="d-flex flex-wrap mb-1 scroller">
+            <div *ngFor="let q of filterQuestionsList" class="mb-1">
                 <app-question-full-info [question]="q"></app-question-full-info>
             </div>
         </div>

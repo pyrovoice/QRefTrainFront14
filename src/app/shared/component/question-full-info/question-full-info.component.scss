@@ -1,11 +1,15 @@
 .responsive-container-mp4 {
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-    width: 300px;
-  
-    @media only screen and (max-width: 720px) {
-      width: 200px;
-      width: inherit;
-    }
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 300px;
+
+  @media only screen and (max-width: 720px) {
+    width: 200px;
+    width: inherit;
   }
+}
+
+:host {
+  height: 100%;
+}

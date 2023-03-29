@@ -11,7 +11,8 @@ export class QuestionFullInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.question)
+    
   }
 
 }
+

@@ -2,17 +2,25 @@ table {
     width: 100%;
 }
 
-.w-50 {
-    width: 49% !important
-}
-.content{
+.content {
     flex: 1 1 auto;
     overflow-y: auto;
     min-height: 0px;
 }
 
-#scroller {
+.scroller {
     flex: 1 1 auto;
     overflow-y: auto;
     min-height: 0px
+}
+
+.scroller>div {
+    width: 50%;
+    @media only screen and (max-width: 720px) {
+        width: 100%
+      }
+}
+
+.height-max{
+    height: 80vh;
 }
