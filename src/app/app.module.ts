@@ -10,13 +10,15 @@ import { CommonModule } from '@angular/common';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { QuestionListComponent } from './question-list/question-list.component';
+import { QuestionListingTableComponent } from './question-listing-table/question-listing-table.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionListComponent
+    QuestionListComponent,
+    QuestionListingTableComponent
   ],
   imports: [
     BrowserModule,    

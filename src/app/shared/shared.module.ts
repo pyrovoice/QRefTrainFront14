@@ -1,3 +1,4 @@
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UntypedFormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -15,12 +16,19 @@ import { TranslateModule } from '@ngx-translate/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { QuestionFullInfoComponent } from './component/question-full-info/question-full-info.component';
+import { MatSortModule } from '@angular/material/sort';
+import { LoadingPageComponent } from './loading-page/loading-page.component';
+import { PopupVideoPlayerComponent } from './component/popup-video-player/popup-video-player.component';
+import { PopupQuestionFullComponent } from './component/popup-question-full/popup-question-full.component';
 
 @NgModule({
     declarations: [
         ReportQuestionComponent,
         PopupReportQuestionComponent,
-        QuestionFullInfoComponent
+        QuestionFullInfoComponent,
+        LoadingPageComponent,
+        PopupVideoPlayerComponent,
+        PopupQuestionFullComponent
 
     ],
     imports: [
@@ -37,7 +45,9 @@ import { QuestionFullInfoComponent } from './component/question-full-info/questi
         MatButtonModule,
         TranslateModule,
         MatTableModule,
-        MatAutocompleteModule
+        MatAutocompleteModule,
+        MatPaginatorModule,
+        MatSortModule
     ],
     exports: [
         CommonModule,
@@ -54,7 +64,10 @@ import { QuestionFullInfoComponent } from './component/question-full-info/questi
         TranslateModule,
         MatTableModule,
         MatAutocompleteModule,
-        QuestionFullInfoComponent
+        QuestionFullInfoComponent,
+        MatPaginatorModule,
+        MatSortModule,
+        LoadingPageComponent
     ],
     providers: [
         UntypedFormBuilder

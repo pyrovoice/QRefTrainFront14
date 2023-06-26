@@ -1,6 +1,7 @@
 import { QuestionListComponent } from './question-list/question-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { QuestionListingTableComponent } from './question-listing-table/question-listing-table.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
   {
     path: 'matchanalysis', loadChildren: () => import('./matchanalysis/matchanalysis.module').then(m => m.MatchanalysisModule)
   },
-  { path: 'question-list', component: QuestionListComponent },
+  { path: 'question-list', component: QuestionListingTableComponent },
   {
     path: '', redirectTo: 'homepage', pathMatch: 'full'
   },

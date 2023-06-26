@@ -8,6 +8,7 @@ import { Question } from 'src/app/shared/model/question';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AdminService } from 'src/app/shared/service/admin.service';
 import { Quiz } from 'src/app/shared/model/quiz.model';
+import { LoadingStatus } from 'src/app/shared/enum/loading-status.enum';
 
 @Component({
   selector: 'app-quiz',
@@ -21,6 +22,9 @@ export class QuizComponent implements OnInit {
   questions: Question[] = [];
   currentQuestionNb = 0;
   quiz: Quiz;
+  error
+  LoadingStatus = LoadingStatus
+  loadingStatus: LoadingStatus = LoadingStatus.ONGOING
   @ViewChild('video') video!: ElementRef;
   constructor(private quizService: QuizService, private localQuizService: LocalQuizService,
     private route: ActivatedRoute, private sanitizer: DomSanitizer, private api: AdminService, private router: Router) {
@@ -32,6 +36,7 @@ export class QuizComponent implements OnInit {
     let withVideo;
     this.route.queryParamMap.subscribe(params => selectedOptions = params.getAll('topic'));
     this.quizService.getQuiz(10, selectedOptions).subscribe((quiz) => {
+      this.loadingStatus = LoadingStatus.SUCCESSFUL
       this.quiz = quiz;
       quiz.Questions.forEach(q => {
         let question = new Question();
@@ -50,6 +55,10 @@ export class QuizComponent implements OnInit {
         this.questions.push(question);
       });
       this.setCurrentQuestion(0);
+    }, error => {
+      this.loadingStatus = LoadingStatus.ERROR
+      console.log(error)
+      this.error = error;
     })
   }
 

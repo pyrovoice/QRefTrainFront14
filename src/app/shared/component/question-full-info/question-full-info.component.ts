@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./question-full-info.component.scss']
 })
 export class QuestionFullInfoComponent implements OnInit {
-  @Input() question;
+  @Input() question: QuestionResult;
   constructor() { }
 
   ngOnInit(): void {

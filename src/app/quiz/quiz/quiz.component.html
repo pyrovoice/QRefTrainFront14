@@ -1,9 +1,6 @@
-<div *ngIf="questions.length == 0" class="position-absolute top-50 w-100 text-center">
-  <h1>Loading</h1>
-  <br />
-  <small>Multiple options are possible.</small>
-</div>
-<div *ngIf="questions.length != 0">
+
+<app-loading-page  *ngIf="loadingStatus == LoadingStatus.ONGOING" message="Multiple options are possible."></app-loading-page>
+<div *ngIf="loadingStatus == LoadingStatus.SUCCESSFUL">
   <nav class="navbar d-flex flex-nowrap justify-content-between align-items-stretch border-bottom">
     <div class="flex-grow-1 strong-font px-2 mt-auto mb-auto">{{(currentQuestionNb+1) + ". " +
       currentQuestion.questionText}}</div>
@@ -37,4 +34,8 @@
     <div *ngIf="!isCurrentLastQuestion();" class="border flex-grow-1 flex-shrink-0  result-button bg-warning"
       (click)="goToResult()">Finish</div>
   </nav>
+</div>
+
+<div *ngIf="loadingStatus == LoadingStatus.ERROR">
+  {{error.message}}
 </div>

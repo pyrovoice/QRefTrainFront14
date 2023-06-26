@@ -10,7 +10,7 @@ export class QuestionResult {
      Id: number;
      questionSubject: QuestionSubject;
      GifName?: String;
-     questionText: String;
+     QuestionText: String;
      AnswerExplanation: string;
      Answers: AnswerResult[];
      Tags: Tags[];

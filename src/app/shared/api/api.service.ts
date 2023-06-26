@@ -21,7 +21,7 @@ export class ApiService {
 
   public post<T, D>(path: string, data: D, params: any = null, version = "1.0.0") {
     return this.http
-      .post<T>(this.getApiUrl(path, version), data,{ params: params })
+      .post<T>(this.getApiUrl(path, version), data, { params: params })
       .pipe(catchError(err => this.handleError(err)));
   }
 
@@ -34,7 +34,8 @@ export class ApiService {
   public put<T, D>(path: string, data: D, params: any = null, version = "1.0.0") {
     return this.http
       .put<T>(this.getApiUrl(path, version), data, this.getHttpOptions(params))
-      .pipe(catchError(err => this.handleError(err)));
+      .pipe(catchError(err => this.handleError(err)))
+      .pipe(catchError(err => { return err }));
   }
 
   public getApiUrl(path: string, version: string) {
@@ -61,6 +62,6 @@ export class ApiService {
       errorInstance = error;
     }
 
-    return throwError(errorInstance);
+    return throwError(() => errorInstance)
   }
 }

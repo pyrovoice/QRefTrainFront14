@@ -1,31 +1,30 @@
-<div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light border-bottom  pl-1">
-    <!-- <div class="d-none d-sm-block"><button (onclick)="sidebarOpen = !sidebarOpen">sidebar</button></div> -->
-    <div class="d-none d-sm-block"><button (click)="loadPage('question-list')">Question list</button></div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<nav class="navbar navbar-expand-lg navbar-light border-bottom  pl-1">
+  <div class="container">
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link pl-0" href="#">Home</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" (click)="loadPage('question-list')">All questions</a>
         </li>
 
         <!-- <li class="nav-item">
-          <a class="nav-link" (click)="startQuiz()">Quiz</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="startStrategy()">Strategy</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="startQuestionList()">Question list</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="startMatchAnalysis()">Match Analysis</a>
-        </li> -->
+        <a class="nav-link" (click)="startQuiz()">Quiz</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="startStrategy()">Strategy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="startQuestionList()">Question list</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="startMatchAnalysis()">Match Analysis</a>
+      </li> -->
       </ul>
     </div>
-  </nav>
+  </div>
+  <!-- <div class="d-none d-sm-block"><button (onclick)="sidebarOpen = !sidebarOpen">sidebar</button></div> -->
+
+</nav>
+<div class="container">
   <!-- <mat-sidenav-container class="example-container">
     <mat-sidenav #sidenav mode="over" [(opened)]="sidebarOpen">
       Sidenav content
@@ -34,7 +33,7 @@
 
 
   <div class="text-left">
-    <div class="mt-1">
+    <div class="mt-3">
       <button class="btn btn-primary" (click)="startQuiz(null)">
         Start a Quiz
       </button>
