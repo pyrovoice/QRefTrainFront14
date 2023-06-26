@@ -1,0 +1,6 @@
+<div class="position-relative w-100 h-100"><app-question-full-info [question]="data.q"></app-question-full-info>
+    <div class="d-flex position-absolute bottom-0 end-0">
+        <button mat-stroked-button class="me-1" (click)="moveVideo(-1)">previous</button>
+        <button mat-stroked-button class="ms-1" (click)="moveVideo(1)">next</button>
+    </div>
+</div>

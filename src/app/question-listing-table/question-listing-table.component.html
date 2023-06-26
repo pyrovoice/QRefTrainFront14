@@ -1,0 +1,70 @@
+<div [ngClass]="questions && questions.length>0 ? '':'d-none'">
+    <div class="example-header">
+        <div class="d-flex flex-row ">
+            <div class="m-1 me-5" (click)="navigate('')" style="cursor: pointer;"><i class="fa fa-home fa-3x" aria-hidden="true"></i>
+            </div>
+            <form *ngIf="tagOptions != null && tagOptions.size > 0" class="example-form">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Enter a tag</mat-label>
+                    <input type="text" placeholder="Pick one" aria-label="Tag" matInput [formControl]="tagControl"
+                        [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option | translate}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </form>
+            add toggle for videos
+        </div>
+    </div>
+
+    <div class="mat-elevation-z8">
+        <mat-table [dataSource]="dataSource" matSort>
+
+            <ng-container matColumnDef="Id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.Id}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="QuestionText">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Text </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.QuestionText}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Answers">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Good answer(s) </mat-header-cell>
+                <mat-cell *matCellDef="let row" (click)="openVideo(row)"> {{getGoodAnswers(row)}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Video">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Video </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <button (click)="openVideo(row)" mat-mini-fab color="primary" aria-label="Report question">
+                        <mat-icon>play_arrow</mat-icon>
+                    </button>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="AnswerExplanation">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Explanation </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.AnswerExplanation}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef><i>Issue?</i></mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <app-report-question-button [questionId]="row.Id"></app-report-question-button>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;">
+            </mat-row>
+        </mat-table>
+
+        <mat-paginator class="mat-paginator-sticky" [pageSizeOptions]="[5, 10, 25, 100]" class="border-top border-dark"></mat-paginator>
+    </div>
+</div>
+<app-loading-page [ngClass]="questions && questions.length>0 ? 'd-none':''"
+    message="Only good answers are shown. Click to display all of them."></app-loading-page>
